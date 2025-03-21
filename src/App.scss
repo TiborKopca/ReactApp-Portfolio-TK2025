@@ -1,0 +1,282 @@
+/* *********************************** */
+/* *** GENERAL STYLES & RESETS*** */
+/* *********************************** */
+/* @import url(normalize.min.css); */
+/* @import url(reset.css); */
+
+/* ******************************** */
+/* *** TYPOGRAPHY *** */
+/* ******************************** */
+/* @font-face {
+  font-family: "Roboto-VariableFont_wdth,wght";
+  src: url(./Roboto-VariableFont_wdth%2Cwght.woff2) format("woff2");
+} */
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("./assets/fonts/roboto/Roboto-Bold.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: url("./assets/fonts/roboto/Roboto-Black.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoExtraBold";
+  src: url("./assets/fonts/roboto/Roboto-ExtraBold.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoExtraLight";
+  src: url("./assets/fonts/roboto/Roboto-ExtraLight.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoItalic";
+  src: url("./assets/fonts/roboto/Roboto-Italic.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url("./assets/fonts/roboto/Roboto-Light.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("./assets/fonts/roboto/Roboto-Medium.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("./assets/fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoSemiBold";
+  src: url("./assets/fonts/roboto/Roboto-SemiBold.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoThin";
+  src: url("./assets/fonts/roboto/Roboto-Thin.woff2") format("woff2"),
+    url("./assets/fonts/roboto/Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ******************************** */
+  /* TYPOGRAPHY LOCAL */
+  /* ******************************** */
+  --font-Roboto-local-regular: "RobotoRegular", Fallback, sans-serif;
+  --font-Roboto-local-bold: "RobotoBold", Fallback, sans-serif;
+  --font-Roboto-local-black: "RobotoBlack", Fallback, sans-serif;
+  --font-Roboto-local-light: "RobotoLight", Fallback, sans-serif;
+  --font-Roboto-local-medium: "RobotoMedium", Fallback, sans-serif;
+  --font-Roboto-local-semibold: "RobotoSemiBold", Fallback, sans-serif;
+  --font-Roboto-local-italic: "RobotoItalic", Fallback, sans-serif;
+  --font-Roboto-local-extrabold: "RobotoExtraBold", Fallback, sans-serif;
+  --font-Roboto-local-extralight: "RobotoExtraLight", Fallback, sans-serif;
+  --font-Roboto-local-thin: "RobotoThin", Fallback, sans-serif;
+
+  /* ******************************** */
+  /* COLORS */
+  /* ******************************** */
+  --main-color: #f6f7f0;
+  --svg-background-color: #000000;
+  --background-color-light: #f3f1f5;
+  --background-color-dark: #e3d8cd82;
+  --grey-dark: #353535;
+  --white: #ffffff;
+  --black: #000000;
+  /* --logo: url("../img/svg/TKlogo.svg"); */
+  --selection-color: #258880;
+  --main-images-backup-color: #46a0d5;
+  --darkmode-switch: #3494b1;
+  --darkmode-switch-after: #fffbf5;
+  --darkmode-switch-active: #fdd384;
+  --darkmode-switch-sun-icon: #10104d;
+  --header-namebox-background: #ffffff26;
+  --about-section-text: #5a5a5a;
+  --mywork-section-background-light: #fff7ef;
+  --mywork-section-background-dark: #516f82;
+  --work-cards-text: #46a0d5;
+  --work-cards-category-text: #808080;
+  --contact-section-title: #46a0d5;
+  --form-focus: #46a0d5;
+  --form-submit-button: #46a0d5;
+  --form-reset-button-hover: #fac9c9;
+  --form-submit-button-hover: #016ba8;
+
+  --text-color-primary: #181818;
+  --text-color-secondary: #f3f3f3;
+  /* 
+  --bg-color-card: #f7f4f4;
+  --bg-color-card-semi-transparent: rgba(247, 244, 244, 0.6);
+  --text-color-primary: #f3f3f3;
+  --text-color-secondary: #181818;
+
+  --color-yellow: #EDA72E;
+  --color-beige: #EACE90;
+  --color-red: #93250C;
+  --color-green: #6B9F64;
+  --color-brown: #69443D;
+
+  --color-grey-light: #CCD5AF;
+  --color-grey-dark: #9ea588;
+
+  --bg-color-header: rgba(237, 167, 46, 95%);
+  --bg-color-footer: rgba(237, 167, 46, 95%); 
+  */
+
+  /* ******************************** */
+  /* COLOR SCHEME AND BACKGROUND */
+  /* ******************************** */
+  /* Default (Light Mode) */
+  color-scheme: system light dark;
+  /* background: radial-gradient(
+    circle,
+    var(--color-bg-dark-gradient) 10%,
+    var(--color-bg-dark) 100%
+  ); */
+  background-color: var(--background-color-light);
+  color: var(--text-color-primary);
+  transition: background-color 0.5s ease;
+}
+
+/* ******************************** */
+/* COLOR SCHEME AND BACKGROUND */
+/* ******************************** */
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--text-color-secondary);
+    /* color: var(--color-font-light); */
+    background-color: var(--background-color-dark);
+  
+    /* background: radial-gradient(
+      circle,
+      var(--color-bg-light-gradient) 10%,
+      var(--color-bg-light) 100%
+    ); */
+  }
+  /* body {} */
+  /* a:hover {
+    color: #747bff;
+  } */
+  /* button {
+    background-color: #f9f9f9;
+  } */
+}
+*::selection{
+  background-color: var(--selection-color);
+  color: var(--blanco);
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*/
+
+*{
+  margin:0;
+  padding:0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  /* SCROLL BEHAVIOUR - proximity(when near the next section it will snap to next or mandatory(it will not be able to scroll fully */
+  scroll-snap-type: y proximity;
+  /* font-family: "Lato", Helvetica, sans-serif; */
+  /* font-family: "Roboto-variableFont_wdth,wght", Helvetica, sans-serif; */
+  font-family: var(--font-Roboto-local-regular);
+}
+
+body {
+  height: 100%;
+
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+/*
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */

@@ -1,12 +1,36 @@
-# React + Vite
+# A Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+**Portfolio website**
+<!-- **The website is entirely responsive, mobile first and only has 6 breakpoints.** -->
 
-Currently, two official plugins are available:
+## Technology used
+<!-- - HTML  -->
+<!-- - CSS  -->
+<!-- - JS -->
+- React 19.0
+- Sass 1.86.0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionality
+<!-- - Dark Mode - Clicking on this sun icon - let’s us toggle between light mode and dark mode. -->
+<!-- - Lazy Loading -->
 
-## Expanding the ESLint configuration
+## Design elements utilized
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Licence
+- This project is under the MIT License. You can see more details in the file  [LICENSE](LICENSE).
+
+### Authors
+<!-- - [@TiborKopca](https://github.com/TiborKopca) -->
+<!-- - [source](https://github.com/RamziBach/Building-a-portfolio-website) -->
+
+### Screenshots
+<!-- ![screenshot1](./public/screenshots/Screenshot1.png) -->
+
+
+<!-- Portfolio website, showing different features and holding links to the projects I did or participated in. -->
+
+<!-- Production version 0.1 -->
+<!-- Whatsapp floating button added (https://github.com/rafaelbotazini/floating-whatsapp) -->
+
+
