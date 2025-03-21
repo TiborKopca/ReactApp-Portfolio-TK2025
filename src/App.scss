@@ -208,7 +208,7 @@
 }
 *::selection{
   background-color: var(--selection-color);
-  color: var(--blanco);
+  color: var(--text-color-secondary);
 }
 
 /* #root {
@@ -229,7 +229,7 @@
 html {
   scroll-behavior: smooth;
   /* SCROLL BEHAVIOUR - proximity(when near the next section it will snap to next or mandatory(it will not be able to scroll fully */
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   /* font-family: "Lato", Helvetica, sans-serif; */
   /* font-family: "Roboto-variableFont_wdth,wght", Helvetica, sans-serif; */
   font-family: var(--font-Roboto-local-regular);
@@ -239,44 +239,32 @@ body {
   height: 100%;
 
 }
-section {
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+.container{
+  /* width: 90%; */
+  max-width: 1366px;
+  margin: auto;
+  /* background-color: #ccc; */
+  overflow: hidden;
+}
+.snap-container {
   height: 100vh;
   scroll-snap-align: center;
 }
 
-/*
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.hero{
+  background: url('./assets/img/derek-thomson-NqJYQ3m_rVA-unsplash.avif') var(--main-images-backup-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-height: 1000px;
+  font-size: unset;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */

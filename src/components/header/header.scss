@@ -1,0 +1,386 @@
+/* ******************************** */
+/* HEADER */
+/* ******************************** */
+
+.header {
+  background: rgba(64, 98, 106, 0.75);
+  width: auto;
+  //   height: 4.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+  position: sticky;
+  /* safari */
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100000;
+
+  // background: url("../img/derek-thomson-NqJYQ3m_rVA-unsplash.jpg") var(--main-images-backup-color);
+  // background-repeat: no-repeat;
+  /* background-position: center; */
+  // background-size: cover;
+  // max-height: 1000px;
+  // font-size: unset;
+
+  .header__logowrapper {
+    //   position: fixed;
+    //   display: inline-block;
+    /* margin-left: 40px;
+      margin-top: 20px; */
+    animation: logo 30s;
+    animation-iteration-count: infinite;
+
+    .logo__dimensions {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+
+  .header__menu {
+    max-width: 1366px;
+    height: 100%;
+    //   margin: 1rem 0;
+    //   text-align: right;
+    display: flex;
+    //   justify-content: end;
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+    .menu__list {
+      display: flex;
+      margin: 0;
+      list-style-type: none;
+      gap: 2rem;
+
+      .menu__link {
+        text-align: center;
+        font-family: Roboto;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.13125rem;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 10.5%; /* 3.675px */
+        text-underline-offset: 20%; /* 6.475px */
+        text-underline-position: from-font;
+
+        // margin: 1rem 1.5rem;
+        color: var(--text-color-secondary);
+        display: inline-block;
+        text-decoration: none;
+        //   border: 2px solid transparent;
+
+
+
+        //   padding: 9px;
+        scale: 1;
+        transition: all 0.2s ease-in-out;
+      }
+      .menu__link:hover {
+        color: var(--text-color-secondary);
+        //   border-radius: 10px;
+        //   border: 2px solid var(--white);
+        //   padding: 9px;
+        text-decoration: underline;
+        scale: 1.1;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+  .header__iconswrapper {
+    margin: 1rem;
+    .icon__darkmodeswitch {
+      width: 2rem;
+      height: auto;
+    }
+  }
+}
+
+// .sticky {
+//   position: sticky;
+// }
+// .sticky + .main {
+//   padding-top: 10rem;
+// }
+
+/* ******************************** */
+/* HEADER SVG LOGO*/
+/* ******************************** */
+.logo-piece {
+  fill: var(--white);
+  fill-opacity: 0.9;
+  stroke: var(--black);
+  stroke-width: 5;
+  opacity: 1;
+}
+.fillSelection {
+  fill: var(--selection-color);
+}
+
+/* ******************************** */
+/* KEYFRAMES / ANIMATIONS */
+/* ******************************** */
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-T-RectangleTop {
+  animation: logo-T-RectangleTop_Animation 30s;
+  animation-iteration-count: infinite;
+}
+@keyframes logo-T-RectangleTop_Animation {
+  0% {
+    transform: translateY(0px);
+  }
+  3% {
+    transform: translateY(-5px);
+  }
+  6% {
+    transform: translateY(5px);
+  }
+  9% {
+    transform: translateY(0px);
+  }
+  91% {
+    transform: translateY(0px);
+  }
+  94% {
+    transform: translateY(5px);
+  }
+  97% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo-T-RectangleBottom {
+  animation: logo-T-RectangleBottom_Animation 30s;
+  animation-iteration-count: infinite;
+}
+@keyframes logo-T-RectangleBottom_Animation {
+  0% {
+    transform: translateY(0px);
+  }
+  6% {
+    transform: translateY(5px);
+  }
+  9% {
+    transform: translateY(-5px);
+  }
+  12% {
+    transform: translateY(0px);
+  }
+  88% {
+    transform: translateY(0px);
+  }
+  91% {
+    transform: translateY(-5px);
+  }
+  94% {
+    transform: translateY(5px);
+  }
+  97% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.logo-K-Path {
+  animation: logo-K-Path_Animation 30s;
+  animation-iteration-count: infinite;
+}
+@keyframes logo-K-Path_Animation {
+  0% {
+    transform: translateX(0px);
+  }
+  6% {
+    transform: translateX(5px);
+  }
+  9% {
+    transform: translateX(-5px);
+  }
+  12% {
+    transform: translateX(0px);
+  }
+  88% {
+    transform: translateX(0px);
+  }
+  91% {
+    transform: translateX(-5px);
+  }
+  94% {
+    transform: translateX(5px);
+  }
+  97% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/*------------------------LANGUAGE SELECTOR---------------------------*/
+.languageContainer {
+  display: flex;
+  justify-content: end;
+  overflow: visible;
+  height: 3rem;
+  /* font-size: small; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.languages {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.languages::before {
+  /* content: '';
+    display: block;
+    width: 32px;
+    height: 32px; */
+}
+.british::before {
+  /* background:url("https://www.countryflags.io/gb/flat/32.png"); */
+  /* background:url('../img/flags/unitedkingdom32x32.png') */
+}
+.spain::before {
+  /* background:url("https://www.countryflags.io/es/flat/32.png"); */
+  /* background:url('../img/flags/spain32x32.png') */
+}
+.slovak::before {
+  /* background:url("https://www.countryflags.io/sk/flat/32.png"); */
+  /* background:url('../img/flags/slovakia32x32.png') */
+}
+.langSelected {
+  border: 2px solid var(--white);
+  border-radius: 10px;
+}
+.hidden {
+  /* opacity: 0; */
+  display: none !important;
+}
+.shown {
+  display: block;
+}
+
+/*------------------------DARK THEME SWITCH---------------------------*/
+.darkModeSwitch {
+  background: var(--darkmode-switch);
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  /* border-style: solid; */
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  transform: scale(0.5);
+}
+.darkModeSwitch::after {
+  display: block;
+  background: var(--darkmode-switch-after);
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 3rem;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+  content: "";
+}
+.darkModeSwitch.active {
+  background: var(--darkmode-switch-active);
+}
+.darkModeSwitch.active::after {
+  left: unset;
+  right: 0;
+}
+.darkModeSwitch span {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: block;
+  color: var(--white);
+  background: none;
+}
+.switchIcon {
+  font-size: 1.25rem;
+  margin: auto 0;
+}
+.fa-moon,
+.fa-sun {
+  color: var(--darkmode-switch-sun-icon);
+}
+
+header .container-header-text {
+  display: flex;
+  margin: 130px 0;
+  justify-content: center;
+  align-content: center;
+  transition: all 2s linear;
+  transform: scale(1);
+  filter: blur(10px);
+}
+
+header .container-header-text:hover {
+  /* filter: blur(4px); */
+  transform: scale(1.5, 1.5);
+}
+
+header .container-header-text .namebox {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 80px;
+  /*TODO - vystupenie mena z velmi priesvitneho a maleho do full a vacsieho (transform)*/
+  background-color: var(--header-namebox-background);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header .container-header-text .namebox h1,
+header .container-header-text .namebox h2 {
+  color: var(--white);
+  font-weight: 300;
+  margin: 0;
+}
+
+header .container-header-text .namebox .name {
+  margin-bottom: 10px;
+  font-size: 65px;
+  line-height: 60px;
+}
+
+header .container-header-text .namebox .profesion {
+  font-size: 25px;
+  line-height: 25px;
+}

@@ -5,11 +5,10 @@
 <!-- **The website is entirely responsive, mobile first and only has 6 breakpoints.** -->
 
 ## Technology used
-<!-- - HTML  -->
-<!-- - CSS  -->
-<!-- - JS -->
 - React 19.0
 - Sass 1.86.0
+<!-- - npm i framer-motion@10.16.4 -->
+<!-- - npm i react-icons -->
 
 ## Funcionality
 <!-- - Dark Mode - Clicking on this sun icon - let’s us toggle between light mode and dark mode. -->
