@@ -124,6 +124,8 @@
   --svg-background-color: #000000;
   --background-color-light: #f3f1f5;
   --background-color-dark: #e3d8cd82;
+  --background-color-menu-mobile: rgba(6, 6, 6, 0.451);
+  
   --grey-dark: #353535;
   --white: #ffffff;
   --black: #000000;
@@ -233,6 +235,7 @@ html {
   /* font-family: "Lato", Helvetica, sans-serif; */
   /* font-family: "Roboto-variableFont_wdth,wght", Helvetica, sans-serif; */
   font-family: var(--font-Roboto-local-regular);
+  font-size: 16px;
 }
 
 body {

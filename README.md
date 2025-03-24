@@ -7,12 +7,14 @@
 ## Technology used
 - React 19.0
 - Sass 1.86.0
-<!-- - npm i framer-motion@10.16.4 -->
-<!-- - npm i react-icons -->
+<!-- npm i framer-motion@10.16.4 -->
+<!-- npm i react-icons -->
+<!-- npm i normalize -->
 
 ## Funcionality
 <!-- - Dark Mode - Clicking on this sun icon - let’s us toggle between light mode and dark mode. -->
 <!-- - Lazy Loading -->
+<!-- When mobile menu is open, body is blurred -->
 
 ## Design elements utilized
 

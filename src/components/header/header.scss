@@ -38,89 +38,7 @@
       width: 3.5rem;
     }
   }
-  .hamburger{
-    display: none;
-  }
-  @media screen and (max-width: 768px) {
-    .hamburger{
-      display: block;
-      cursor: pointer;
-    }
-  }
-  .header__menu {
-    max-width: 1366px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    /* gap: 10%; */
-    width: 65%;
-    justify-content: space-between;
-
-    .menu__list {
-      display: flex;
-      margin: 0;
-      list-style-type: none;
-      gap: 2rem;
-
-      .menu__link {
-        text-align: center;
-        font-family: Roboto;
-        font-size: 1.5em;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.13125rem;
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-skip-ink: none;
-        text-decoration-thickness: 10.5%; /* 3.675px */
-        text-underline-offset: 20%; /* 6.475px */
-        text-underline-position: from-font;
-
-        // margin: 1rem 1.5rem;
-        color: var(--text-color-secondary);
-        display: inline-block;
-        text-decoration: none;
-        //   border: 2px solid transparent;
-
-
-
-        //   padding: 9px;
-        scale: 1;
-        transition: all 0.2s ease-in-out;
-
-        @media screen and (max-width: 1366px) {
-          font-size: 1.1em;
-          
-        }
-      }
-      .menu__link:hover {
-        color: var(--text-color-secondary);
-        //   border-radius: 10px;
-        //   border: 2px solid var(--white);
-        //   padding: 9px;
-        text-decoration: underline;
-        scale: 1.1;
-        transition: all 0.2s ease-in-out;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .header__menu {
-      display: none;
-    }
-  }
-
-  .header__iconswrapper {
-    margin: 1rem;
-    cursor: pointer;
-
-    .icon__darkmodeswitch, .icon__hamburgermenu {
-      width: 2rem;
-      height: auto;
-    }
-  }
+  
 }
 
 // .sticky {
@@ -262,103 +180,53 @@
 }
 
 /*------------------------LANGUAGE SELECTOR---------------------------*/
-.languageContainer {
-  display: flex;
-  justify-content: end;
-  overflow: visible;
-  height: 3rem;
-  /* font-size: small; */
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.languages {
-  display: flex;
-  align-items: center;
-  margin: 0.2rem;
-  padding: 0.5rem;
-  color: var(--white);
-  cursor: pointer;
-}
-.languages::before {
-  /* content: '';
-    display: block;
-    width: 32px;
-    height: 32px; */
-}
-.british::before {
-  /* background:url("https://www.countryflags.io/gb/flat/32.png"); */
-  /* background:url('../img/flags/unitedkingdom32x32.png') */
-}
-.spain::before {
-  /* background:url("https://www.countryflags.io/es/flat/32.png"); */
-  /* background:url('../img/flags/spain32x32.png') */
-}
-.slovak::before {
-  /* background:url("https://www.countryflags.io/sk/flat/32.png"); */
-  /* background:url('../img/flags/slovakia32x32.png') */
-}
-.langSelected {
-  border: 2px solid var(--white);
-  border-radius: 10px;
-}
-.hidden {
-  /* opacity: 0; */
-  display: none !important;
-}
-.shown {
-  display: block;
-}
+// .languageContainer {
+//   display: flex;
+//   justify-content: end;
+//   overflow: visible;
+//   height: 3rem;
+//   /* font-size: small; */
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+// }
+// .languages {
+//   display: flex;
+//   align-items: center;
+//   margin: 0.2rem;
+//   padding: 0.5rem;
+//   color: var(--white);
+//   cursor: pointer;
+// }
+// .languages::before {
+//   /* content: '';
+//     display: block;
+//     width: 32px;
+//     height: 32px; */
+// }
+// .british::before {
+//   /* background:url("https://www.countryflags.io/gb/flat/32.png"); */
+//   /* background:url('../img/flags/unitedkingdom32x32.png') */
+// }
+// .spain::before {
+//   /* background:url("https://www.countryflags.io/es/flat/32.png"); */
+//   /* background:url('../img/flags/spain32x32.png') */
+// }
+// .slovak::before {
+//   /* background:url("https://www.countryflags.io/sk/flat/32.png"); */
+//   /* background:url('../img/flags/slovakia32x32.png') */
+// }
+// .langSelected {
+//   border: 2px solid var(--white);
+//   border-radius: 10px;
+// }
+// .hidden {
+//   /* opacity: 0; */
+//   display: none !important;
+// }
+// .shown {
+//   display: block;
+// }
 
-/*------------------------DARK THEME SWITCH---------------------------*/
-.darkModeSwitch {
-  background: var(--darkmode-switch);
-  display: flex;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  /* border-style: solid; */
-  border-radius: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  transform: scale(0.5);
-}
-.darkModeSwitch::after {
-  display: block;
-  background: var(--darkmode-switch-after);
-  width: 2.5rem;
-  height: 2.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: unset;
-  border-radius: 3rem;
-  transition: all 0.5s ease;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
-  content: "";
-}
-.darkModeSwitch.active {
-  background: var(--darkmode-switch-active);
-}
-.darkModeSwitch.active::after {
-  left: unset;
-  right: 0;
-}
-.darkModeSwitch span {
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-  display: block;
-  color: var(--white);
-  background: none;
-}
-.switchIcon {
-  font-size: 1.25rem;
-  margin: auto 0;
-}
-.fa-moon,
-.fa-sun {
-  color: var(--darkmode-switch-sun-icon);
-}
+
 

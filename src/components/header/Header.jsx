@@ -1,10 +1,12 @@
 import React from "react";
 import "./header.scss";
+import Navbar from "../navbar/Navbar.jsx";
 
 function Header() {
+  
   return (
     <header className="header" id="stickynavbar">
-      <a href="/" className="header__logowrapper">
+      <a href="#Hero" aria-label="homepage link" className="header__logowrapper">
         <svg
           alt="Tibor Kopca logo"
           className="logo__dimensions"
@@ -40,98 +42,10 @@ function Header() {
           Sorry, your browser does not support inline SVG.
         </svg>
       </a>
-      {/* TODO Sidebar - mobile menu */}
-      <nav className="header__menu" id="headerMenu">
-        <ul className="menu__list">
-          <li>
-            <a
-              data-link="stickynavbar"
-              onClick="topFunction()"
-              className="menu__link eng scrollLink"
-              lang="en"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              data-link="about"
-              onClick="scrollToAbout()"
-              className="menu__link eng scrollLink"
-              lang="en"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              data-link="work"
-              onClick="scrollToWork()"
-              className="menu__link eng scrollLink"
-              lang="en"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              data-link="work"
-              onClick="scrollToWork()"
-              className="menu__link eng scrollLink"
-              lang="en"
-            >
-              Education
-            </a>
-          </li>
-          <li>
-            <a
-              data-link="contact"
-              onClick="scrollToContact()"
-              className="menu__link eng scrollLink"
-              lang="en"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+      
+      <Navbar></Navbar>
 
-        {/* <ul className="languageContainer" id="langButtonsBar">
-                    <li id="eng" className="languages british">
-                        <span>EN</span>
-                    </li>
-                    <li id="esp" className="languages spain">
-                        <p>ES</p>
-                    </li>
-                    <li id="svk" className="languages slovak">
-                        <p>SK</p>
-                    </li>
-                </ul> */}
-                
-          {/* <button className="darkModeSwitch" id="switch">
-            <span>
-              <i className="switchIcon fa-solid fa-sun"></i>
-            </span>
-            <span>
-              <i className="switchIcon fa-solid fa-moon"></i>
-            </span>
-          </button> */}
-      <a href="/" className="header__iconswrapper">
-        <img
-          src="/src/assets/svg/mdi-moon-waning-crescent.svg"
-          alt="dark mode icon"
-          className="icon__darkmodeswitch"
-        />
-      </a>
-      </nav>
-
-
-      <a href="/" className="header__iconswrapper hamburger">
-        <img
-          src="/src/assets/svg/mdi-hamburger-menu.svg"
-          alt="hamburger menu icon"
-          className="icon__hamburgermenu"
-        />
-      </a>
+      
     </header>
   );
 }

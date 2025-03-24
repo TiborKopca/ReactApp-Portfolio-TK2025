@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <section className="snap-container hero">
+      <section className="snap-container hero" id="Hero">
         <div className="hero__IDwrapper" id="nameboxContainer">
           <div className="namebox">
             <h1 className="name">Tibor Kopca</h1>
@@ -20,11 +20,19 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="snap-container">Skills</section>
+      <section className="snap-container" id="Skills">
+        Skills
+      </section>
       <section className="snap-container">Parralax</section>
-      <section className="snap-container">Projects</section>
-      <section className="snap-container">About</section>
-      <section className="snap-container">Contact</section>
+      <section className="snap-container" id="Projects">
+        Projects
+      </section>
+      <section className="snap-container" id="About">
+        About
+      </section>
+      <section className="snap-container" id="Contact">
+        Contact
+      </section>
     </>
   );
 }
