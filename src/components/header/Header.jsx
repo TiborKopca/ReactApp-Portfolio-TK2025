@@ -46,7 +46,7 @@ function Header() {
           <li>
             <a
               data-link="stickynavbar"
-              onclick="topFunction()"
+              onClick="topFunction()"
               className="menu__link eng scrollLink"
               lang="en"
             >
@@ -56,7 +56,7 @@ function Header() {
           <li>
             <a
               data-link="about"
-              onclick="scrollToAbout()"
+              onClick="scrollToAbout()"
               className="menu__link eng scrollLink"
               lang="en"
             >
@@ -66,7 +66,7 @@ function Header() {
           <li>
             <a
               data-link="work"
-              onclick="scrollToWork()"
+              onClick="scrollToWork()"
               className="menu__link eng scrollLink"
               lang="en"
             >
@@ -76,7 +76,7 @@ function Header() {
           <li>
             <a
               data-link="work"
-              onclick="scrollToWork()"
+              onClick="scrollToWork()"
               className="menu__link eng scrollLink"
               lang="en"
             >
@@ -86,7 +86,7 @@ function Header() {
           <li>
             <a
               data-link="contact"
-              onclick="scrollToContact()"
+              onClick="scrollToContact()"
               className="menu__link eng scrollLink"
               lang="en"
             >
@@ -106,9 +106,8 @@ function Header() {
                         <p>SK</p>
                     </li>
                 </ul> */}
-      </nav>
-
-      {/* <button className="darkModeSwitch" id="switch">
+                
+          {/* <button className="darkModeSwitch" id="switch">
             <span>
               <i className="switchIcon fa-solid fa-sun"></i>
             </span>
@@ -121,6 +120,16 @@ function Header() {
           src="/src/assets/svg/mdi-moon-waning-crescent.svg"
           alt="dark mode icon"
           className="icon__darkmodeswitch"
+        />
+      </a>
+      </nav>
+
+
+      <a href="/" className="header__iconswrapper hamburger">
+        <img
+          src="/src/assets/svg/mdi-hamburger-menu.svg"
+          alt="hamburger menu icon"
+          className="icon__hamburgermenu"
         />
       </a>
     </header>

@@ -11,10 +11,10 @@ function App() {
     <>
       <Header></Header>
       <section className="snap-container hero">
-        <div class="container-header-text" id="nameboxContainer">
-          <div class="namebox">
-            <h1 class="name">Tibor Kopca</h1>
-            <h2 class="profesion eng" lang="en">
+        <div className="hero__IDwrapper" id="nameboxContainer">
+          <div className="namebox">
+            <h1 className="name">Tibor Kopca</h1>
+            <h2 className="profesion eng" lang="en">
               Web Developer
             </h2>
           </div>

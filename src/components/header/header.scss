@@ -38,16 +38,24 @@
       width: 3.5rem;
     }
   }
-
+  .hamburger{
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .hamburger{
+      display: block;
+      cursor: pointer;
+    }
+  }
   .header__menu {
     max-width: 1366px;
     height: 100%;
-    //   margin: 1rem 0;
-    //   text-align: right;
     display: flex;
-    //   justify-content: end;
-    /* align-items: center; */
+    align-items: center;
     flex-wrap: wrap;
+    /* gap: 10%; */
+    width: 65%;
+    justify-content: space-between;
 
     .menu__list {
       display: flex;
@@ -58,7 +66,7 @@
       .menu__link {
         text-align: center;
         font-family: Roboto;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -81,6 +89,11 @@
         //   padding: 9px;
         scale: 1;
         transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 1.1em;
+          
+        }
       }
       .menu__link:hover {
         color: var(--text-color-secondary);
@@ -93,9 +106,17 @@
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .header__menu {
+      display: none;
+    }
+  }
+
   .header__iconswrapper {
     margin: 1rem;
-    .icon__darkmodeswitch {
+    cursor: pointer;
+
+    .icon__darkmodeswitch, .icon__hamburgermenu {
       width: 2rem;
       height: auto;
     }
@@ -341,46 +362,3 @@
   color: var(--darkmode-switch-sun-icon);
 }
 
-header .container-header-text {
-  display: flex;
-  margin: 130px 0;
-  justify-content: center;
-  align-content: center;
-  transition: all 2s linear;
-  transform: scale(1);
-  filter: blur(10px);
-}
-
-header .container-header-text:hover {
-  /* filter: blur(4px); */
-  transform: scale(1.5, 1.5);
-}
-
-header .container-header-text .namebox {
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 10px;
-  display: inline-block;
-  text-align: center;
-  padding: 20px 80px;
-  /*TODO - vystupenie mena z velmi priesvitneho a maleho do full a vacsieho (transform)*/
-  background-color: var(--header-namebox-background);
-  background: rgba(0, 0, 0, 0.3);
-}
-
-header .container-header-text .namebox h1,
-header .container-header-text .namebox h2 {
-  color: var(--white);
-  font-weight: 300;
-  margin: 0;
-}
-
-header .container-header-text .namebox .name {
-  margin-bottom: 10px;
-  font-size: 65px;
-  line-height: 60px;
-}
-
-header .container-header-text .namebox .profesion {
-  font-size: 25px;
-  line-height: 25px;
-}
