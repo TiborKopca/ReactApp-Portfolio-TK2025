@@ -1,0 +1,129 @@
+.hero {
+  // height: calc(100vh - var(--header-hight));
+  /* max-height: 1000px; */
+  font-size: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero__img {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100vw;
+  //url("./src/assets/img/derek-thomson-NqJYQ3m_rVA-unsplash.avif")
+  background: radial-gradient(
+    circle,
+    var(--main-image-backup-color) 10%,
+    black 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero__id {
+  //   margin: 130px 0;
+  /* transition: all 2s linear; */
+  /* transform: scale(1); */
+  /* filter: blur(10px); */
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  background: rgba(5, 5, 5, 0.28);
+  border-radius: 2.1875rem;
+
+  text-align: center;
+  //   padding: 20px 80px;
+
+  min-width: 50%;
+  max-width: 1360px; //85rem
+  min-height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: 2rem;
+  gap: 2rem;
+  /*TODO - vystupenie mena z velmi priesvitneho a maleho do full a vacsieho (transform)*/
+  /* background-color: var(--header-namebox-background);
+    background: rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+
+  .id__photo {
+    width: clamp(14rem, 10vw, 20rem);
+    height: auto;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 22.25rem;
+    // background: url(<path-to-image>) lightgray 0px -11.61px / 107.302% 107.302% no-repeat;
+    filter: grayscale(100%);
+  }
+  @media screen and (max-width: 768px) {
+    .id__photo {
+      order: 2;
+    }
+  }
+}
+
+header .container-header-text:hover {
+  /* filter: blur(4px); */
+  /* transform: scale(1.5, 1.5); */
+}
+
+.id__namebox {
+  color: var(--white);
+  text-align: center;
+  font-family: RobotoLight;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.namebox__name {
+  font-size: clamp(4em, 2.5vw, 5em);
+
+  // letter-spacing: 1.35rem;
+  margin: 0;
+//   margin-bottom: 10px;
+//   font-size: 65px;
+//   line-height: 60px;
+}
+.namebox__profession {
+  font-size: clamp(2.25rem, 2.5vw, 3.25rem);
+  // letter-spacing: 0.8775rem;
+  margin: 0;
+//   font-size: 25px;
+//   line-height: 25px;
+}
+
+.hero__cta{
+    max-width: 95vw;
+    z-index: 1;
+    padding: 1.3rem;
+    
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 14px 14px 1px 0px rgba(0, 0, 0, 0.25);
+    
+    border: none;
+    border-radius: 2rem;
+
+    font-family: 'RobotoRegular';
+    letter-spacing: 0.3575rem;
+    font-size: 2.75rem;
+
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        padding: 1rem;
+        
+    }
+}

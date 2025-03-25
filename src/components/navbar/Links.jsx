@@ -5,7 +5,6 @@ function Links() {
         "About",
         "Skills",
         "Projects",
-        "Education",
         "Contact"
     ]
   return (

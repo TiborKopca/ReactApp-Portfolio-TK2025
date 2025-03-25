@@ -118,20 +118,26 @@
   --font-Roboto-local-thin: "RobotoThin", Fallback, sans-serif;
 
   /* ******************************** */
+  /* DIMENSIONS */
+  /* ******************************** */
+  --header-hight: 4.3rem;
+
+  /* ******************************** */
   /* COLORS */
   /* ******************************** */
   --main-color: #f6f7f0;
   --svg-background-color: #000000;
   --background-color-light: #f3f1f5;
   --background-color-dark: #e3d8cd82;
-  --background-color-menu-mobile: rgba(6, 6, 6, 0.451);
-  
+  --background-color-menu-mobile: rgba(6, 6, 6, 0.4);
+
   --grey-dark: #353535;
-  --white: #ffffff;
-  --black: #000000;
+  --white: #f8f8f8;
+  --black: #0a0a0a;
   /* --logo: url("../img/svg/TKlogo.svg"); */
   --selection-color: #258880;
-  --main-images-backup-color: #46a0d5;
+  --main-image-backup-color: rgb(70, 160, 213);
+
   --darkmode-switch: #3494b1;
   --darkmode-switch-after: #fffbf5;
   --darkmode-switch-active: #fdd384;
@@ -193,7 +199,7 @@
     color: var(--text-color-secondary);
     /* color: var(--color-font-light); */
     background-color: var(--background-color-dark);
-  
+
     /* background: radial-gradient(
       circle,
       var(--color-bg-light-gradient) 10%,
@@ -208,7 +214,7 @@
     background-color: #f9f9f9;
   } */
 }
-*::selection{
+*::selection {
   background-color: var(--selection-color);
   color: var(--text-color-secondary);
 }
@@ -221,9 +227,9 @@
 }
 */
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -240,7 +246,9 @@ html {
 
 body {
   height: 100%;
-
+  min-width: 95vw; /* Prevents shrinking below the viewport width */
+  overflow-x: hidden; /* Hides horizontal scrollbars */
+  box-sizing: border-box; /* Ensures padding/border don't increase width */
 }
 
 a {
@@ -251,7 +259,7 @@ a:hover {
   color: #535bf2;
 }
 
-.container{
+.container {
   /* width: 90%; */
   max-width: 1366px;
   margin: auto;
@@ -261,58 +269,10 @@ a:hover {
 .snap-container {
   height: 100vh;
   scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  
 }
-
-.hero{
-  background: url('./assets/img/derek-thomson-NqJYQ3m_rVA-unsplash.avif') var(--main-images-backup-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  /* max-height: 1000px; */
-  font-size: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.mt-header {
+  padding-top: var(--header-hight);
 }
-
-.hero__IDwrapper {
-  /* margin: 130px 0; */
-  /* transition: all 2s linear; */
-  /* transform: scale(1); */
-  /* filter: blur(10px); */
-}
-
-header .container-header-text:hover {
-  /* filter: blur(4px); */
-  /* transform: scale(1.5, 1.5); */
-}
-
-header .container-header-text .namebox {
-  /* border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 10px;
-  display: inline-block;
-  text-align: center;
-  padding: 20px 80px; */
-  /*TODO - vystupenie mena z velmi priesvitneho a maleho do full a vacsieho (transform)*/
-  /* background-color: var(--header-namebox-background);
-  background: rgba(0, 0, 0, 0.3); */
-}
-
-/* header .container-header-text .namebox h1,
-header .container-header-text .namebox h2 {
-  color: var(--white);
-  font-weight: 300;
-  margin: 0;
-} */
-
-/* header .container-header-text .namebox .name {
-  margin-bottom: 10px;
-  font-size: 65px;
-  line-height: 60px;
-} */
-
-/* header .container-header-text .namebox .profesion {
-  font-size: 25px;
-  line-height: 25px;
-} */

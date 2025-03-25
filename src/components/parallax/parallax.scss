@@ -1,0 +1,60 @@
+.parallax {
+  position: relative;
+  height: 100%; // Create enough scroll space
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    position: absolute;
+    // top: 10%;
+    font-size: 4rem;
+    color: rgb(238, 238, 238);
+
+    z-index: 3; // On top
+    transition: transform 0.1s ease-out;
+  }
+
+  .mountains {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/src/assets/img/mountains.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2; // Middle layer
+    transition: transform 0.1s ease-out;
+  }
+
+  .planets {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 500px;
+    background: url(/src/assets/img/planets.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    transition: transform 0.1s ease-out;
+  }
+
+  .stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/img/nazar-hrabovyi-qCnjiI3pW3Y-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0; // Furthest back
+    transition: transform 0.1s ease-out;
+  }
+}

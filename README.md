@@ -11,10 +11,12 @@
 <!-- npm i react-icons -->
 <!-- npm i normalize -->
 
-## Funcionality
+## Funcionality / Future improvements
 <!-- - Dark Mode - Clicking on this sun icon - let’s us toggle between light mode and dark mode. -->
 <!-- - Lazy Loading -->
 <!-- When mobile menu is open, body is blurred -->
+<!-- Add a spinner for better user feedback while loading. -->
+<!-- Replace the gradient with a solid color or skeleton loader for a simpler effect. -->
 
 ## Design elements utilized
 

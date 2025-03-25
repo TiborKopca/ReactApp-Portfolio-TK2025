@@ -65,11 +65,13 @@
     flex-wrap: wrap;
     flex-direction: column;
     background: var(--background-color-menu-mobile);
+    backdrop-filter: blur(7px);
     gap: 2rem;
     /* Transition for smooth sliding */
     transform: translateX(105%);
     transition: transform 0.4s ease, opacity 0.4s ease;
     opacity: 0; /* Initially hidden */
+    
   }
   .header__menu.mobile-menu-open {
     transform: translateX(0);

@@ -3,6 +3,8 @@
 // import viteLogo from '/vite.svg'
 import "./App.scss";
 import Header from "./components/header/Header.jsx";
+import Hero from "./components/hero/Hero.jsx";
+import Parallax from "./components/parallax/Parallax.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -10,27 +12,19 @@ function App() {
   return (
     <>
       <Header></Header>
-      <section className="snap-container hero" id="Hero">
-        <div className="hero__IDwrapper" id="nameboxContainer">
-          <div className="namebox">
-            <h1 className="name">Tibor Kopca</h1>
-            <h2 className="profesion eng" lang="en">
-              Web Developer
-            </h2>
-          </div>
-        </div>
-      </section>
-      <section className="snap-container" id="Skills">
-        Skills
-      </section>
-      <section className="snap-container">Parralax</section>
-      <section className="snap-container" id="Projects">
-        Projects
-      </section>
-      <section className="snap-container" id="About">
+      <Hero></Hero>
+      <section className="snap-container mt-header" id="About">
         About
       </section>
-      <section className="snap-container" id="Contact">
+      <section className="snap-container mt-header" id="Skills">
+        Skills
+      </section>
+      <section className="snap-container"><Parallax/></section>
+      <section className="snap-container mt-header" id="Projects">
+        Projects
+      </section>
+    
+      <section className="snap-container mt-header" id="Contact">
         Contact
       </section>
     </>
