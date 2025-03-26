@@ -1,0 +1,31 @@
+.skills__container {
+    // width: 90%;
+    margin: auto;
+    background-color: var(--color6);
+    overflow: hidden;
+  
+    display: flex;
+    // width: auto; //1920px
+  //   max-width: 85rem; //1360px;
+    height: 100%;
+  
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    @media screen and (max-width: 768px) {
+      gap: 1rem;
+      }
+  }
+  .skills__description {
+    max-width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--text-color-secondary);
+    font-family: var(--font-Roboto-local-regular);
+    @media screen and (max-width: 768px) {    
+      font-size: 0.9em;
+      
+    }
+  }

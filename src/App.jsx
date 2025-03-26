@@ -7,20 +7,21 @@ import Hero from "./components/hero/Hero.jsx";
 import Parallax from "./components/parallax/Parallax.jsx";
 import About from "./components/about/About.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import Skills from "./components/skills/Skills.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header></Header>
+      <Header/>
       <main>
-        <Hero></Hero>
+        <Hero/>
         <section className="snap-container mt-header" id="About">
-          <About></About>
+          <About/>
         </section>
         <section className="snap-container mt-header" id="Skills">
-          Skills
+          <Skills/>
         </section>
         <section className="snap-container">
           <Parallax />
@@ -33,7 +34,7 @@ function App() {
           Contact
         </section>
       </main>
-      <Footer></Footer>
+      <Footer/>
     </>
   );
 }

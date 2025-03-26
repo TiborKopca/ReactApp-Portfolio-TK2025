@@ -18,7 +18,7 @@
 <!-- Add a spinner for better user feedback while loading. -->
 <!-- Replace the gradient with a solid color or skeleton loader for a simpler effect. -->
 <!-- Reusable button component -->
-
+<!-- Flipping skill cards with description on the other side -->
 -CONSENT POPUP IMPLEMENTATION
 <!-- npm install react-cookie -->
 
