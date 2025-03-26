@@ -49,9 +49,9 @@
   /* background-color: var(--header-namebox-background);
     background: rgba(0, 0, 0, 0.3); */
   z-index: 1;
-
+  overflow: hidden;
   .id__photo {
-    width: clamp(14rem, 10vw, 20rem);
+    width: clamp(10rem, 10vw, 20rem);
     height: auto;
     flex-shrink: 0;
     aspect-ratio: 1/1;
@@ -87,7 +87,7 @@ header .container-header-text:hover {
 }
 
 .namebox__name {
-  font-size: clamp(4em, 2.5vw, 5em);
+  font-size: clamp(4rem, 2.5vw, 5rem);
 
   // letter-spacing: 1.35rem;
   margin: 0;
@@ -109,7 +109,7 @@ header .container-header-text:hover {
     padding: 1.3rem;
     
     background-color: var(--white);
-    color: var(--black);
+    color: var(--text-color-primary);
     box-shadow: 14px 14px 1px 0px rgba(0, 0, 0, 0.25);
     
     border: none;
@@ -120,10 +120,26 @@ header .container-header-text:hover {
     font-size: 2.75rem;
 
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
     @media screen and (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.3rem;
         padding: 1rem;
         
+    }
+
+    &:hover {
+      color: var(--text-color-secondary);
+      background: linear-gradient(135deg, var(--color5),var(--color4)); // Gradient reverse
+      transform: scale(1.1); // Slightly enlarges the button
+      // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); // Add a soft shadow
+    }
+  
+    &:active {
+      transform: scale(0.95); // Adds a press-down effect
+    }
+  
+    &:focus {
+      outline: 2px solid #8f94fb; // Accessibility focus ring
     }
 }

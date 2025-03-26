@@ -17,6 +17,10 @@
 <!-- When mobile menu is open, body is blurred -->
 <!-- Add a spinner for better user feedback while loading. -->
 <!-- Replace the gradient with a solid color or skeleton loader for a simpler effect. -->
+<!-- Reusable button component -->
+
+-CONSENT POPUP IMPLEMENTATION
+<!-- npm install react-cookie -->
 
 ## Design elements utilized
 

@@ -18,7 +18,7 @@ const Parallax = () => {
   }, []);
 
   return (
-    <div className="parallax">
+    <div className="parallax" aria-label="parallax effect image">
       <h2 className="parallax__text">What I do?</h2>
 
       <div className="mountains"></div>
