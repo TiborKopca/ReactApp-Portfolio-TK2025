@@ -32,7 +32,7 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      imgsrc: "/src/assets/img/work/Vue_drink_api500x500.png",
+      imgsrc: "./src/assets/img/work/Vue_drink_api500x500.png",
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -41,7 +41,7 @@ function Projects() {
     },
     {
       id: 2,
-      imgsrc: "/src/assets/img/work/Vue_drink_api500x500.png",
+      imgsrc: "./src/assets/img/work/Volando_art_500x500.jpg",
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -50,7 +50,7 @@ function Projects() {
     },
     {
       id: 3,
-      imgsrc: "/src/assets/img/work/Vue_drink_api500x500.png",
+      imgsrc: "./src/assets/img/work/Vue_drink_api500x500.png",
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
