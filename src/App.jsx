@@ -31,9 +31,7 @@ function App() {
 
         <Projects />
 
-        <section className="snap-container mt-header" id="Contact">
-          <Contactform/>
-        </section>
+        <Contactform />
       </main>
       <Footer />
     </>

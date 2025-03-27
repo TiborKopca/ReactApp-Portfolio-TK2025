@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import "./projects.scss";
 import Button from "../button/Button.jsx";
 import vueimage from "/src/assets/img/work/vue_drink_api500x500.avif";
+import volandoimage from "/src/assets/img/work/volando_art_500x500.jpg";
+import chucknorrisimage from "/src/assets/img/work/chucknorris_api500x500.avif";
 
 function Projects() {
   const [progress, setProgress] = useState(100); // Full width at start
@@ -33,7 +35,7 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      imgsrc: {vueimage},
+      imgsrc: vueimage,
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -42,23 +44,24 @@ function Projects() {
     },
     {
       id: 2,
-      imgsrc: "/src/assets/img/work/volando_art_500x500.jpg",
-      link: "https://drink-api-login.netlify.app/",
-      imgalt: "Vue API SPA",
-      title: "Vue Framework Project - API",
-      description: "SPA Vue.js framework project with API calls. 2023",
-      buttonlabel: "Vue.js Project outside link",
+      imgsrc: volandoimage,
+      link: "https://volando.art/",
+      imgalt: "Voland art site image",
+      title: "Artists presentation site",
+      description: "Personal Website with an gallery. PHP, Parallax.js, 2020-2021 (collaboration)",
+      buttonlabel: "Volando.art - Artists presentation site outside link",
     },
     {
       id: 3,
-      imgsrc: "/src/assets/img/work/Vue_drink_api500x500.png",
-      link: "https://drink-api-login.netlify.app/",
-      imgalt: "Vue API SPA",
-      title: "Vue Framework Project - API",
-      description: "SPA Vue.js framework project with API calls. 2023",
-      buttonlabel: "Vue.js Project outside link",
+      imgsrc: chucknorrisimage,
+      link: "chucknorris-jokes-api.netlify.app",
+      imgalt: "Simple API site image",
+      title: "Chuck Norris Jokes API website",
+      description: "Small Fetch API project that shows random joke about Chuck Norris. 2024",
+      buttonlabel: "Chuck Norris Jokes API website outside link",
     },
   ];
+
 
   const Single = ({ project }) => {
     return (
@@ -69,7 +72,7 @@ function Projects() {
               className="card__img"
               src={project.imgsrc}
               alt={project.imgalt}
-              loading="lazy"
+              // loading="lazy"
             />
           </div>
           <div className="card__description">

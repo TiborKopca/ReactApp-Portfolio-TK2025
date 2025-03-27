@@ -43,7 +43,16 @@ function Contactform() {
       };
 
   return (
-    <section className="contact" id="contact">
+    <section className="snap-container mt-header contact" id="Contact">
+    <div className="container__title" aria-label="about me title">
+        <h2 className="title__heading eng" lang="en">
+        Contact Me
+        </h2>
+        <p className="title__subtitle eng" lang="en">
+        or connect on social platforms
+        </p>
+      </div>
+
       <div className="container">
         <h3 className="title">Contact</h3>
         <p>
