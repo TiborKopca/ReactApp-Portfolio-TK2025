@@ -43,7 +43,7 @@ function Navbar() {
       </button> */}
         <button className="header__iconswrapper">
           <img
-            src="/src/assets/svg/mdi-moon-waning-crescent.svg"
+            src="./src/assets/svg/mdi-moon-waning-crescent.svg"
             alt="dark mode icon"
             className="icon__darkmodeswitch"
           />

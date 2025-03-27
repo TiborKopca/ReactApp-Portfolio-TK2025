@@ -280,11 +280,14 @@ a:hover {
 }
 
 .snap-container {
-  height: 100dvh;
+  height: 100vh;
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
-  
+  @media screen and (max-width: 768px) {
+    height: 100svh
+    
+  }
 }
 .mt-header {
   padding-top: var(--header-hight);
