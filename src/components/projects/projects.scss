@@ -1,31 +1,169 @@
-.skills__container {
-    // width: 90%;
-    margin: auto;
-    background-color: var(--color6);
-    overflow: hidden;
-  
-    display: flex;
-    // width: auto; //1920px
-  //   max-width: 85rem; //1360px;
-    height: 100%;
-  
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 3rem;
-    flex-shrink: 0;
-    @media screen and (max-width: 768px) {
-      gap: 1rem;
-      }
+.projects__section {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 6rem;
+}
+.title__progressbar {
+  width: 85rem;
+  height: 0.5rem;
+  margin: 0.5rem;
+  background: var(--color4);
+  border-radius: 2px;
+  transition: width 0.2s ease-in-out;
+  //color transitions
+  // background: linear-gradient(90deg, #3498db, #e74c3c);
+  // transition: width 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+.projects__section {
+  // width: 90%;
+  // margin: auto;
+  // background-color: var(--color2-main);
+  // overflow: hidden;
+
+  // display: flex;
+  // width: auto; //1920px
+  // max-width: 85rem; //1360px;
+  // height: 100%;
+  // width: 100%;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // gap: 1rem;
+  // flex-shrink: 0;
+}
+.project__container {
+  height: 100dvh;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  // gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  // flex-wrap: wrap;
+}
+.project__card {
+  background-color: var(--color6);
+  max-width: 85rem; //1360px;
+  // max-width: 400px;
+  // max-width: 50%; //1360px;
+  width: 100%;
+  // max-height: 45%;
+
+  border: 1px solid var(--black);
+  // border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-top: 10rem;
+
+  &:hover {
+    // transform: translateY(-8px);
   }
-  .skills__description {
-    max-width: 80%;
-    text-align: center;
-    font-size: 1.2em;
+
+  .card__imgwrapper {
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    // padding: 1rem;
+    flex: 1;
+  }
+  .card__img {
+    min-width: 23rem;
+    max-width: 100%; // Ensures the image scales down
+    height: auto; // Maintains aspect ratio
+    flex-shrink: 1; // Allows shrinking inside a flex container
+  }
+
+  .card__description {
+    padding: 1.5rem;
+    flex: 3;
     color: var(--text-color-secondary);
     font-family: var(--font-Roboto-local-regular);
-    @media screen and (max-width: 768px) {    
-      font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (max-width: 768px) { 
+      padding : 0.5rem;
       
     }
   }
+
+  .card__title {
+    // font-size: 1.5rem;
+    // margin: 0 0 0.75rem;
+    color: var(--text-color-secondary);
+    text-align: left;
+    font-family: Roboto;
+    font-size: clamp(1.3rem, 3vw, 3.25rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+  }
+
+  .card__text {
+    // font-size: 1rem;
+    // color: #555;
+    // margin-bottom: 1rem;
+    color: var(--text-color-secondary);
+font-family: Roboto;
+font-size: clamp(1rem, 2vw, 1.8rem);
+font-style: normal;
+font-weight: 500;
+line-height: 117.141%; /* 2.12319rem */
+  }
+  .project__button {
+    width: fit-content;
+    display: inline-flex;
+    padding: 1.3rem;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: RobotoMedium;
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18688rem;
+
+    border: none;
+    border-radius: 1.5em;
+    color: var(--text-color-primary);
+    background: var(--color7);
+    box-shadow: 14px 14px 1px 0px rgba(0, 0, 0, 0.25);
+    //   box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text-color-secondary);
+      background: var(--color4);
+      background: linear-gradient(135deg, var(--color5), var(--color4));
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1em;
+      padding: 1rem;
+      // font-size: 1.5625rem;
+      letter-spacing: 0.2rem;
+      margin: auto;
+    }
+  }
+}

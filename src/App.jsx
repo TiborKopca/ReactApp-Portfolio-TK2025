@@ -8,33 +8,33 @@ import Parallax from "./components/parallax/Parallax.jsx";
 import About from "./components/about/About.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Skills from "./components/skills/Skills.jsx";
+import Projects from "./components/projects/Projects.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header/>
+      <Header />
       <main>
-        <Hero/>
+        <Hero />
         <section className="snap-container mt-header" id="About">
-          <About/>
+          <About />
         </section>
         <section className="snap-container mt-header" id="Skills">
-          <Skills/>
+          <Skills />
         </section>
         <section className="snap-container">
           <Parallax />
         </section>
-        <section className="snap-container mt-header" id="Projects">
-          Projects
-        </section>
+
+        <Projects />
 
         <section className="snap-container mt-header" id="Contact">
           Contact
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -120,7 +120,7 @@
   /* ******************************** */
   /* DIMENSIONS */
   /* ******************************** */
-  --header-hight: 4.3rem;
+  --header-hight: 68px;
 
   /* ******************************** */
   /* COLORS */
@@ -154,7 +154,7 @@
   //Card colors
   --bg-color-card: #f7f4f4;
   --bg-color-card-semi-transparent: rgba(247, 244, 244, 0.6);
-  
+
   //Old colors
   --main-image-backup-color: rgb(70, 160, 213);
 
@@ -280,7 +280,7 @@ a:hover {
 }
 
 .snap-container {
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;

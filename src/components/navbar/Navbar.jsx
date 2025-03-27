@@ -41,13 +41,13 @@ function Navbar() {
           <i className="switchIcon fa-solid fa-moon"></i>
         </span>
       </button> */}
-        <a href="/" className="header__iconswrapper">
+        <button className="header__iconswrapper">
           <img
             src="/src/assets/svg/mdi-moon-waning-crescent.svg"
             alt="dark mode icon"
             className="icon__darkmodeswitch"
           />
-        </a>
+        </button>
       </nav>
 
       <ToggleButton isOpen={open} setOpen={setOpen} />

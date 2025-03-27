@@ -22,7 +22,7 @@ import jsonicon from '/src/assets/icons/json150x150.svg';
 
 function Skills() {
   return (
-    <section className="skills__container" id="about">
+    <section className="skills__container">
       <div className="container__title" aria-label="skills title">
         <h2 className="title__heading eng" lang="en">
           Skills

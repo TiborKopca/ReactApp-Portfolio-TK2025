@@ -15,6 +15,8 @@
   gap: 1rem;
   flex-shrink: 0;
 }
+
+//CONTAINER TITLE, TITLE HEADING & TITLE SUBTITLE ARE THE SAME FOR THE ALL OF THE PAGE
 .container__title {
   display: flex;
   flex-direction: column;
@@ -58,6 +60,8 @@
     letter-spacing: 0.48125rem;
   }
 }
+
+
 .aboutme__button {
   display: flex;
   padding: 1.3rem;
@@ -81,7 +85,7 @@
   //   box-shadow: 14px 14px 1px 0px rgba(0, 0, 0, 0.25);
   border: none;
   border-radius: 1.5em;
-  letter-spacing: 0.325rem;
+  
 
   cursor: pointer;
   background: var(--color7);

@@ -6,7 +6,7 @@
 
   display: flex;
   // width: auto; //1920px
-//   max-width: 85rem; //1360px;
+  //   max-width: 85rem; //1360px;
   height: 100%;
 
   flex-direction: column;
@@ -16,7 +16,7 @@
   flex-shrink: 0;
   @media screen and (max-width: 768px) {
     gap: 1rem;
-    }
+  }
 }
 .skills__description {
   max-width: 80%;
@@ -24,9 +24,8 @@
   font-size: 1.2em;
   color: var(--text-color-secondary);
   font-family: var(--font-Roboto-local-regular);
-  @media screen and (max-width: 768px) {    
+  @media screen and (max-width: 768px) {
     font-size: 0.9em;
-    
   }
 }
 .skills__wrapper {
@@ -55,11 +54,11 @@
   // padding: 1rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-&:hover{
+  &:hover {
     transform: scale(1.05);
     background-color: rgba(255, 255, 255, 0.747);
     transition: all 0.3s ease-in-out;
-}
+  }
   .card__img {
     width: clamp(2.5rem, 6vw, 6rem);
     height: auto;
@@ -69,6 +68,37 @@
   }
   .card__description {
     font-family: var(--font-Roboto-local-regular);
+    color: var(--text-color-primary);
     text-align: center;
+  }
+}
+
+// INTERSECTION OBSERVER ANIMATIONS
+.hidden__card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 1s ease filter 0.6s ease;
+
+  filter: blur(5px);
+  /* transform: scale(0.9); */
+  /*the image will come from the left, translateX(100px)==from the right*/
+//   transform: translateX(-100%);
+//   transition-property: transform, filter;
+//   transition: 2s;
+//   transition-timing-function: unset;
+}
+
+.show__card {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  /* transform: scale(1); */
+//   transform: translateX(0);
+}
+
+/*This will prevent the animation to run every fucking time*/
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }

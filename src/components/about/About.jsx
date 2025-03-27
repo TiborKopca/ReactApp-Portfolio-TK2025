@@ -16,7 +16,7 @@ function About() {
 
   // MAIN CONTENT
   return (
-    <section className="aboutme__container" id="about">
+    <section className="aboutme__container">
       <div className="container__title" aria-label="about me title">
         <h2 className="title__heading eng" lang="en">
           About me
