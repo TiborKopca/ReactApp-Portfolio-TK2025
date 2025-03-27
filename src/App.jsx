@@ -9,6 +9,7 @@ import About from "./components/about/About.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
+import Contactform from "./components/contactform/Contactform.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -24,14 +25,14 @@ function App() {
         <section className="snap-container mt-header" id="Skills">
           <Skills />
         </section>
-        <section className="snap-container">
+        <section className="snap-container" id="Projects">
           <Parallax />
         </section>
 
         <Projects />
 
         <section className="snap-container mt-header" id="Contact">
-          Contact
+          <Contactform/>
         </section>
       </main>
       <Footer />

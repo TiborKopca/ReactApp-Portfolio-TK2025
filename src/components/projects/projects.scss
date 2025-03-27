@@ -3,9 +3,9 @@
 }
 .sticky {
   position: sticky;
-  top: 0;
+  top: 4rem;
   left: 0;
-  padding-top: 6rem;
+  // padding-top: 6rem;
 }
 .title__progressbar {
   width: 85rem;
@@ -40,6 +40,7 @@
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
+  // scroll-margin-top: 80px; // Adjust based on your navbar height
   width: 100%;
   display: flex;
   // gap: 2rem;
@@ -75,15 +76,15 @@
 
   .card__imgwrapper {
     // width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
     // padding: 1rem;
     flex: 1;
   }
   .card__img {
-    min-width: 23rem;
+    min-width: 17rem;
     max-width: 100%; // Ensures the image scales down
     height: auto; // Maintains aspect ratio
     flex-shrink: 1; // Allows shrinking inside a flex container

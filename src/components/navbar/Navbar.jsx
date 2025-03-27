@@ -3,6 +3,7 @@ import { useState} from "react";
 import "./navbar.scss";
 import ToggleButton from "./ToggleButton";
 import Links from "./Links";
+import moonicon from "/src/assets/svg/mdi-moon-waning-crescent.svg";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -43,7 +44,7 @@ function Navbar() {
       </button> */}
         <button className="header__iconswrapper">
           <img
-            src="./src/assets/svg/mdi-moon-waning-crescent.svg"
+            src={moonicon}
             alt="dark mode icon"
             className="icon__darkmodeswitch"
           />

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./projects.scss";
 import Button from "../button/Button.jsx";
+import vueimage from "/src/assets/img/work/vue_drink_api500x500.avif";
 
 function Projects() {
   const [progress, setProgress] = useState(100); // Full width at start
@@ -32,7 +33,7 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      imgsrc: "./src/assets/img/work/Vue_drink_api500x500.png",
+      imgsrc: {vueimage},
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -41,7 +42,7 @@ function Projects() {
     },
     {
       id: 2,
-      imgsrc: "./src/assets/img/work/Volando_art_500x500.jpg",
+      imgsrc: "/src/assets/img/work/volando_art_500x500.jpg",
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -50,7 +51,7 @@ function Projects() {
     },
     {
       id: 3,
-      imgsrc: "./src/assets/img/work/Vue_drink_api500x500.png",
+      imgsrc: "/src/assets/img/work/Vue_drink_api500x500.png",
       link: "https://drink-api-login.netlify.app/",
       imgalt: "Vue API SPA",
       title: "Vue Framework Project - API",
@@ -88,7 +89,7 @@ function Projects() {
   };
 
   return (
-    <section className="projects__section mt-header" id="Projects" ref={projectsRef}>
+    <section className="projects__section mt-header" ref={projectsRef}>
       <div className="container__title sticky" aria-label="projects title">
         <h2 className="title__heading eng" lang="en">
           Projects
