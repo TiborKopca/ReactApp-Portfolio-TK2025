@@ -8,9 +8,9 @@ function Links() {
         "Contact"
     ]
   return (
-    <ul className="menu__list">{items.map((item, index)=>(
-        <li>
-            <a href={`#${item}`} key={index} className="menu__link" lang="en">{item}</a>
+    <ul className="menu__list">{items.map((item)=>(
+        <li key={item}>
+            <a href={`#${item}`} className="menu__link" lang="en">{item}</a>
         </li>
     ))}
           {/* <li>

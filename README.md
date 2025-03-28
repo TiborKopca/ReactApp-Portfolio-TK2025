@@ -4,6 +4,7 @@
 **Portfolio website**
 **The website is entirely responsive, mobile first**
 - Production version v0.1
+- Portfolio website, showing different features and holding links to the projects I did or participated in
 
 ## Technology used
 - React 19.0
@@ -13,7 +14,6 @@
 <!-- npm i framer-motion@10.16.4 -->
 <!-- npm i react-icons -->
 <!-- npm i normalize -->
--CONSENT POPUP IMPLEMENTATION
 <!-- npm install react-cookie -->
 
 ## Functionality & Design elements utilized
@@ -41,6 +41,8 @@
 <!-- Animated form placeholders -->
 <!-- emailjs.com - Custom mailing service with message design, form validation by sending a mail to an user email adress and confirmation of the message sending. -->
 <!-- Regex form validation -->
+<!-- CONSENT POPUP IMPLEMENTATION -->
+<!-- PRIVACY POLICY AND TERMS OF USE POPUP IMPLEMENTATION -->
 
 ## Licence
 - This project is under the MIT License. You can see more details in the file  [LICENSE](LICENSE).
@@ -50,9 +52,9 @@
 
 
 ### Screenshots
-<!-- ![screenshot1](./public/screenshots/Screenshot1.png) -->
+![screenshot1](/src/assets/screenshots/screenshot.png)
 
-<!-- Portfolio website, showing different features and holding links to the projects I did or participated in. -->
+
 
 
 

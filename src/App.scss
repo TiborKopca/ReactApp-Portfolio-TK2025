@@ -131,9 +131,10 @@
   --background-color-dark: #e3d8cd82;
   --background-color-menu-mobile: rgba(6, 6, 6, 0.4);
   --selection-color: #258880;
+  --footer-color: rgba(64, 98, 106, 0.6);
 
   //React app 2025
-  --color1: rgb(64, 98, 106);
+  --color1: rgba(64, 98, 106, 1);
   --color2-main: rgb(253, 253, 253);
   --color3: rgb(245, 245, 245);
   --color4: rgb(33, 158, 188);
@@ -295,13 +296,4 @@ a:hover {
 }
 .mt-header {
   padding-top: var(--header-hight);
-}
-
-// OBSOLETE
-.container {
-  /* width: 90%; */
-  // max-width: 1366px;
-  // margin: auto;
-  /* background-color: #ccc; */
-  // overflow: hidden;
 }

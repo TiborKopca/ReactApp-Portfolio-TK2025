@@ -4,6 +4,9 @@ import heroImage from "/src/assets/img/derek-thomson-NqJYQ3m_rVA-unsplash.avif";
 import profilePhoto from "/src/assets/img/TiborKopcaWA.avif";
 
 function Hero() {
+  const handleConnect = () => {
+    window.location.href = "#Contact";
+  };
   return (
     <section
       className="snap-container hero"
@@ -27,7 +30,7 @@ function Hero() {
           </h2>
         </div>
       </div>
-      <button className="hero__cta">Let's Connect</button>
+      <button className="hero__cta" onClick={handleConnect}>Let's Connect</button>
     </section>
   );
 }
