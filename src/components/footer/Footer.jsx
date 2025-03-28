@@ -3,7 +3,7 @@ import './footer.scss'
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="snap-container mt-header footer">
         <span onclick="topFunction()" className="returnIcon" id="jumpToTop">
             <i className="fas fa-arrow-circle-up"></i>
         </span>

@@ -72,7 +72,7 @@ function Projects() {
               className="card__img"
               src={project.imgsrc}
               alt={project.imgalt}
-              // loading="lazy"
+              loading="lazy"
             />
           </div>
           <div className="card__description">

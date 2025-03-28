@@ -155,6 +155,14 @@
   --bg-color-card: #f7f4f4;
   --bg-color-card-semi-transparent: rgba(247, 244, 244, 0.6);
 
+  //Form colors
+  --form-focus: {--color4};
+  --form-submit-button: {--color7};
+  --form-reset-button-hover: --color5;
+  --form-submit-button-hover: --color4;
+
+
+
   //Old colors
   --main-image-backup-color: rgb(70, 160, 213);
 
@@ -169,10 +177,6 @@
   --work-cards-text: #46a0d5;
   --work-cards-category-text: #808080;
   --contact-section-title: #46a0d5;
-  --form-focus: #46a0d5;
-  --form-submit-button: #46a0d5;
-  --form-reset-button-hover: #fac9c9;
-  --form-submit-button-hover: #016ba8;
 
 
   /* 
