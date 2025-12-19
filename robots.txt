@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/video/
+
+# Sitemap - MUST use your custom domain
+# Sitemap: https://www.tiborkopca.eu/sitemap.xml
+# or if non-www:
+Sitemap: https://tiborkopca.eu/sitemap.xml

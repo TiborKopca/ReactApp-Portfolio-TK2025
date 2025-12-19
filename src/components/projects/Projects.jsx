@@ -54,7 +54,7 @@ function Projects() {
     {
       id: 3,
       imgsrc: chucknorrisimage,
-      link: "chucknorris-jokes-api.netlify.app",
+      link: "https://chucknorris-jokes-api.netlify.app/",
       imgalt: "Simple API site image",
       title: "Chuck Norris Jokes API website",
       description: "Small Fetch API project that shows random joke about Chuck Norris. 2024",
