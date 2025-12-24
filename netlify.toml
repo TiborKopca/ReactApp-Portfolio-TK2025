@@ -1,0 +1,22 @@
+# Netlify configuration file
+
+[build]
+  publish = "dist"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[redirects]]
+  from = "https://tiborkopca.netlify.app/*"
+  to = "https://tiborkopca.eu/:splat"
+  status = 301
+  force = true

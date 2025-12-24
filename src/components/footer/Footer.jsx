@@ -68,7 +68,7 @@ function Footer() {
           >
             <img src={discord} alt="discord icon" className="icon__discord" />
           </a>
-          <a className="socialicons" href="#" target="_blank" title="Stalk me on Instagram" aria-label="instagram link">
+          <a className="socialicons" href="https://www.instagram.com/tibor_kopca/" target="_blank" title="Stalk me on Instagram" aria-label="instagram link">
             <img src={instagram} alt="instagram icon" className="icon__instagram" />
           </a>
           
