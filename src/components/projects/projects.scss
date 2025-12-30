@@ -37,7 +37,7 @@
 }
 .project__container {
   // height: 100dvh;
-  min-height: 100dvh;
+  min-height: 100vh;
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
@@ -48,7 +48,14 @@
   align-items: center;
   justify-content: center;
   // flex-wrap: wrap;
+
+  //FLICKER FIXES TEST
+  @media screen and (max-width: 768px) {
+      overflow: visible; /* Instead of overflow: hidden */
+      -webkit-overflow-scrolling: touch;
+  }
 }
+
 .project__card {
   background-color: var(--color6);
   max-width: 85rem; //1360px;
@@ -57,10 +64,10 @@
   width: 100%;
   // max-height: 45%;
 
-  border: 1px solid var(--black);
-  // border-radius: 12px;
+  // border: 1px solid var(--black);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
 
   display: flex;
@@ -73,24 +80,40 @@
   @media screen and (max-width: 768px) {
     max-width: 90%;
   }
+
   &:hover {
     // transform: translateY(-8px);
   }
 
   .card__imgwrapper {
-    // width: 100%;
+    height: auto;
     max-width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     // padding: 1rem;
     flex: 1;
+    //FLICKER FIXES TEST
+    @media screen and (max-width: 768px) {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
   }
+
   .card__img {
     min-width: 17rem;
     max-width: 100%; // Ensures the image scales down
     height: auto; // Maintains aspect ratio
     flex-shrink: 1; // Allows shrinking inside a flex container
+    //FLICKER FIXES TEST
+    @media screen and (max-width: 768px) {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      will-change: transform;
+    }
   }
 
   .card__description {
@@ -101,9 +124,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    @media screen and (max-width: 768px) { 
-      padding : 0.5rem;
-      
+    @media screen and (max-width: 768px) {
+      padding: 0.5rem;
     }
   }
 
@@ -117,7 +139,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-
   }
 
   .card__text {
@@ -125,11 +146,11 @@
     // color: #555;
     // margin-bottom: 1rem;
     color: var(--text-color-secondary);
-font-family: Roboto;
-font-size: clamp(1rem, 2vw, 1.8rem);
-font-style: normal;
-font-weight: 500;
-line-height: 117.141%; /* 2.12319rem */
+    font-family: Roboto;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 117.141%; /* 2.12319rem */
   }
   .project__button {
     width: fit-content;
@@ -169,5 +190,25 @@ line-height: 117.141%; /* 2.12319rem */
       letter-spacing: 0.2rem;
       margin: auto;
     }
+  }
+}
+//FLICKER FIXES TEST
+@media screen and (max-width: 768px) {
+  .project__container {
+    overflow: visible; /* Instead of overflow: hidden */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card__imgwrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .card__img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
   }
 }

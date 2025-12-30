@@ -16,7 +16,8 @@
 
     .menu__link {
       text-align: center;
-      // font-family: Roboto;
+      font-family: Roboto;
+      //   font-size: 1.5em;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -24,29 +25,36 @@
       text-decoration-line: underline;
       text-decoration-style: solid;
       text-decoration-skip-ink: none;
-      text-decoration-thickness: 10.5%;
-      text-underline-offset: 20%;
+      text-decoration-thickness: 10.5%; /* 3.675px */
+      text-underline-offset: 20%; /* 6.475px */
       text-underline-position: from-font;
 
+      // margin: 1rem 1.5rem;
       color: var(--text-color-secondary);
       display: inline-block;
       text-decoration: none;
+      //   border: 2px solid transparent;
+
+      //   padding: 9px;
       scale: 1;
       transition: all 0.2s ease-in-out;
     }
     .menu__link:hover {
       color: var(--text-color-secondary);
+      //   border-radius: 10px;
+      //   border: 2px solid var(--white);
+      //   padding: 9px;
       text-decoration: underline;
       scale: 1.1;
       transition: all 0.2s ease-in-out;
     }
   }
 }
-
 @media screen and (max-width: 768px) {
   .header__menu {
     position: fixed;
     top: 0;
+    // right: -105%;
     right: 0;
     width: 80%;
     height: 100%;
@@ -83,63 +91,29 @@
     }
   }
 }
-
 @media screen and (min-width: 1366px) {
   .menu__link {
     font-size: 1.5em;
   }
 }
-
-/* ******************************** */
-/* DARK MODE TOGGLE BUTTON */
-/* ******************************** */
 .header__iconswrapper {
-  // margin: 1rem;
+  margin: 1rem;
   cursor: pointer;
   border: none;
   background-color: transparent;
-  padding: 0.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
 
-  &:hover {
-    background-color: rgba(142, 202, 230, 0.1);
-    transform: scale(1.1);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
 
   .icon__darkmodeswitch {
     width: 2rem;
     height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    animation: fadeIn 0.3s ease-in-out;
   }
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 /* ******************************** */
 /* MENU HAMBURGER BUTTON */
 /* ******************************** */
 .header__hamburger-button {
   display: none;
 }
-
 @media screen and (max-width: 768px) {
   .header__hamburger-button {
     border: none;
@@ -156,6 +130,8 @@
     transition: all 0.2s ease-in-out;
   }
   .header__hamburger-button:hover{
+    // color: var(--darkmode-switch);
+    // scale: 1.1;
     transform: scale(1.1, 1);
     transition: all 0.2s ease-in-out;
   }
@@ -187,3 +163,56 @@
 .hamburger:hover .bar {
   background-color: var(--main-color); /* Highlight on hover */
 }
+
+/* ******************************** */
+/* DARK THEME SWITCH */
+/* ******************************** */
+// .darkModeSwitch {
+//   background: var(--darkmode-switch);
+//   display: flex;
+//   position: relative;
+//   cursor: pointer;
+//   outline: none;
+//   border: none;
+//   border-radius: 2rem;
+//   align-items: center;
+//   justify-content: space-between;
+//   transform: scale(0.5);
+// }
+// .darkModeSwitch::after {
+//   display: block;
+//   background: var(--darkmode-switch-after);
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: unset;
+//   border-radius: 3rem;
+//   transition: all 0.5s ease;
+//   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+//   content: "";
+// }
+// .darkModeSwitch.active {
+//   background: var(--darkmode-switch-active);
+// }
+// .darkModeSwitch.active::after {
+//   left: unset;
+//   right: 0;
+// }
+// .darkModeSwitch span {
+//   width: 2rem;
+//   height: 2rem;
+//   line-height: 2rem;
+//   display: block;
+//   color: var(--white);
+//   background: none;
+// }
+// .switchIcon {
+//   font-size: 1.25rem;
+//   margin: auto 0;
+// }
+// .fa-moon,
+// .fa-sun {
+//   color: var(--darkmode-switch-sun-icon);
+// }

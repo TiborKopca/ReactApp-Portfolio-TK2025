@@ -4,6 +4,8 @@ import "./navbar.scss";
 import ToggleButton from "./ToggleButton";
 import Links from "./Links";
 import moonicon from "/src/assets/svg/mdi-moon-waning-crescent.svg";
+import sunicon from "/src/assets/svg/mdi_white-balance-sunny.svg";
+import { useThemeContext } from "../../hooks/ThemeContext";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,7 +13,7 @@ function Navbar() {
     // open:{},
     // closed:{}
   // }
-
+const { isDarkMode, toggleTheme } = useThemeContext();
   
   return (
     <>
@@ -42,14 +44,22 @@ function Navbar() {
           <i className="switchIcon fa-solid fa-moon"></i>
         </span>
       </button> */}
-        <button className="header__iconswrapper">
+
+      <button 
+          className="header__iconswrapper"
+          onClick={toggleTheme}
+          aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+          title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
           <img
-            src={moonicon}
-            alt="dark mode icon"
+            src={isDarkMode ? sunicon : moonicon}
+            alt={isDarkMode ? "sun icon" : "moon icon"}
             className="icon__darkmodeswitch"
           />
         </button>
       </nav>
+
+     
 
       <ToggleButton isOpen={open} setOpen={setOpen} />
     </>

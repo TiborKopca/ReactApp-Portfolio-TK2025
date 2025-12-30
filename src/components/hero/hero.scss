@@ -108,8 +108,8 @@ header .container-header-text:hover {
     z-index: 1;
     padding: 1.3rem;
     
-    background-color: var(--white);
-    color: var(--text-color-primary);
+    background-color: var(--button-CTA-color);
+    color: var(--button-CTA-color-text);
     box-shadow: 14px 14px 1px 0px rgba(0, 0, 0, 0.25);
     
     border: none;
@@ -132,6 +132,7 @@ header .container-header-text:hover {
       color: var(--text-color-secondary);
       background: linear-gradient(135deg, var(--color5),var(--color4)); // Gradient reverse
       transform: scale(1.1); // Slightly enlarges the button
+      transition: all 0.3s ease-in-out;
       // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); // Add a soft shadow
     }
   

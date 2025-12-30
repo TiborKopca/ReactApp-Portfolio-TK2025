@@ -1,10 +1,16 @@
 /* *********************************** */
 /* *** GENERAL STYLES & RESETS*** */
 /* *********************************** */
+/* @import url(normalize.min.css); */
+/* @import url(reset.css); */
 
 /* ******************************** */
 /* *** TYPOGRAPHY *** */
 /* ******************************** */
+/* @font-face {
+  font-family: "Roboto-VariableFont_wdth,wght";
+  src: url(./Roboto-VariableFont_wdth%2Cwght.woff2) format("woff2");
+} */
 
 @font-face {
   font-family: "RobotoBold";
@@ -117,12 +123,12 @@
   --header-hight: 68px;
 
   /* ******************************** */
-  /* COLORS - LIGHT MODE (ORIGINAL - PRESERVED) */
+  /* COLORS */
   /* ******************************** */
-  --main-color: rgb(246, 247, 240);
+  --main-color: #f6f7f0;
   --svg-background-color: #000000;
   --background-color-light: #f3f1f5;
-  --background-color-dark: #cfcfcf82;
+  --background-color-dark: #e3d8cd82;
   --background-color-menu-mobile: rgba(6, 6, 6, 0.4);
   --selection-color: #258880;
   --footer-color: rgba(64, 98, 106, 0.6);
@@ -142,15 +148,6 @@
   --white: rgb(248, 248, 248);
   --black: rgb(10, 10, 10);
   
-  //Button colors
-  --button-CTA-color-light: rgb(248, 248, 248);
-  --button-CTA-color-dark: rgb(155, 155, 155);  
-  --button-CTA-color: var(--button-CTA-color-light);
-  --button-CTA-color-text: var(--text-color-primary);
-
-  //Skill card colors
-  --skill-card-background: var(--background-color-light);
-
   //Text colors
   --text-color-primary: #181818;
   --text-color-secondary: #f3f3f3;
@@ -160,13 +157,16 @@
   --bg-color-card-semi-transparent: rgba(247, 244, 244, 0.6);
 
   //Form colors
-  --form-focus: var(--color4);
-  --form-submit-button: var(--color7);
-  --form-reset-button-hover: var(--color5);
-  --form-submit-button-hover: var(--color4);
+  --form-focus: {--color4};
+  --form-submit-button: {--color7};
+  --form-reset-button-hover: --color5;
+  --form-submit-button-hover: --color4;
 
-  //Old colors (preserved)
+
+
+  //Old colors
   --main-image-backup-color: rgb(70, 160, 213);
+
   --darkmode-switch: #3494b1;
   --darkmode-switch-after: #fffbf5;
   --darkmode-switch-active: #fdd384;
@@ -179,118 +179,77 @@
   --work-cards-category-text: #808080;
   --contact-section-title: #46a0d5;
 
+
+  /* 
+  --bg-color-card: #f7f4f4;
+  --bg-color-card-semi-transparent: rgba(247, 244, 244, 0.6);
+  --text-color-primary: #f3f3f3;
+  --text-color-secondary: #181818;
+
+  --color-yellow: #EDA72E;
+  --color-beige: #EACE90;
+  --color-red: #93250C;
+  --color-green: #6B9F64;
+  --color-brown: #69443D;
+
+  --color-grey-light: #CCD5AF;
+  --color-grey-dark: #9ea588;
+
+  --bg-color-header: rgba(237, 167, 46, 95%);
+  --bg-color-footer: rgba(237, 167, 46, 95%); 
+  */
+
   /* ******************************** */
   /* COLOR SCHEME AND BACKGROUND */
   /* ******************************** */
-  color-scheme: light dark;
+  /* Default (Light Mode) */
+  color-scheme: system light dark;
+  /* background: radial-gradient(
+    circle,
+    var(--color-bg-dark-gradient) 10%,
+    var(--color-bg-dark) 100%
+  ); */
   background-color: var(--background-color-light);
   color: var(--text-color-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 /* ******************************** */
-/* DARK MODE - ENHANCED STYLING */
+/* COLOR SCHEME AND BACKGROUND */
 /* ******************************** */
-:root[data-theme="dark"] {
-  /* Main Colors */
-  --main-color: rgb(184, 184, 183);
-  --svg-background-color: #ffffff;
-  
-  /* Background Colors - Rich dark theme */
-  // --background-color-light: #0d1117;
-  // --background-color-dark: #161b22;
-  // --background-color-menu-mobile: rgba(13, 17, 23, 0.95);
-  
-  //Button colors
-  --button-CTA-color: var(--button-CTA-color-dark);
-  --button-CTA-color-text: var(--text-color-secondary);
-
-  /* Text Colors - High contrast */
-  --text-color-primary: #f4f4f5;
-  --text-color-secondary: #c9d1d9;
-  
-  /* Card Colors - Elevated surfaces */
-  --bg-color-card: #1c2128;
-  --bg-color-card-semi-transparent: rgba(28, 33, 40, 0.85);
-
-  //Skill card colors
-  --skill-card-background: var(--background-color-dark);
-
-  /* Accent Colors - Brightened for dark backgrounds */
-  --selection-color: #3fb89e;
-  --footer-color: rgba(142, 202, 230, 0.25);
-  
-  /* Form Colors - Adapted for dark mode */
-  --form-focus: rgb(142, 202, 230);
-  --form-submit-button: rgb(255, 183, 3);
-  --form-reset-button-hover: rgb(33, 158, 188);
-  --form-submit-button-hover: rgb(251, 133, 0);
-
-  /* Section Specific Colors */
-  --about-section-text: #adbac7;
-  --mywork-section-background-light: #161b22;
-  --mywork-section-background-dark: #0d1117;
-  --work-cards-text: #79c0ff;
-  --work-cards-category-text: #8b949e;
-  --contact-section-title: #79c0ff;
-  --header-namebox-background: rgba(142, 202, 230, 0.12);
-
-  /* Apply colors to document */
-  background-color: var(--background-color-dark);
-  color: var(--text-color-primary);
-}
-
-/* ******************************** */
-/* SYSTEM PREFERENCE FALLBACK */
-/* ******************************** */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    /* Main Colors */
-    --main-color: #e8e9dc;
-    --svg-background-color: #ffffff;
-    
-    /* Background Colors */
-    --background-color-light: #0d1117;
-    --background-color-dark: #161b22;
-    --background-color-menu-mobile: rgba(13, 17, 23, 0.95);
-    
-    /* Text Colors */
-    --text-color-primary: #e6edf3;
-    --text-color-secondary: #c9d1d9;
-    
-    /* Card Colors */
-    --bg-color-card: #1c2128;
-    --bg-color-card-semi-transparent: rgba(28, 33, 40, 0.85);
+  :root {
+    color: var(--text-color-secondary);
+    /* color: var(--color-font-light); */
+    background-color: var(--background-color-dark);
 
-    /* Accent Colors */
-    --selection-color: #3fb89e;
-    --footer-color: rgba(142, 202, 230, 0.25);
-    
-    /* Form Colors */
-    --form-focus: rgb(142, 202, 230);
-    --form-submit-button: rgb(255, 183, 3);
-    --form-reset-button-hover: rgb(33, 158, 188);
-    --form-submit-button-hover: rgb(251, 133, 0);
-
-    /* Section Specific Colors */
-    --about-section-text: #adbac7;
-    --mywork-section-background-light: #161b22;
-    --mywork-section-background-dark: #0d1117;
-    --work-cards-text: #79c0ff;
-    --work-cards-category-text: #8b949e;
-    --contact-section-title: #79c0ff;
-    --header-namebox-background: rgba(142, 202, 230, 0.12);
-
-    /* Apply colors */
-    background-color: var(--background-color-light);
-    color: var(--text-color-primary);
+    /* background: radial-gradient(
+      circle,
+      var(--color-bg-light-gradient) 10%,
+      var(--color-bg-light) 100%
+    ); */
   }
+  /* body {} */
+  /* a:hover {
+    color: #747bff;
+  } */
+  /* button {
+    background-color: #f9f9f9;
+  } */
 }
-
 *::selection {
   background-color: var(--selection-color);
   color: var(--text-color-secondary);
 }
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*/
 
 * {
   margin: 0;
@@ -299,37 +258,42 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
+  /* SCROLL BEHAVIOUR - proximity(when near the next section it will snap to next or mandatory(it will not be able to scroll fully */
   scroll-snap-type: y mandatory;
+  /* font-family: "Lato", Helvetica, sans-serif; */
+  /* font-family: "Roboto-variableFont_wdth,wght", Helvetica, sans-serif; */
   font-family: var(--font-Roboto-local-regular);
   font-size: 16px;
 }
 
 body {
   height: 100%;
-  min-width: 95vw;
-  overflow-x: hidden;
-  box-sizing: border-box;
+  min-width: 95vw; /* Prevents shrinking below the viewport width */
+  overflow-x: hidden; /* Hides horizontal scrollbars */
+  box-sizing: border-box; /* Ensures padding/border don't increase width */
 }
 
 a {
   color: inherit;
+  // text-decoration: none;
   text-decoration: underline;
 }
-
 a:hover {
   color: var(--color6);
 }
 
 .snap-container {
-  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: center;
   position: relative;
   overflow: hidden;
+  // @media screen and (max-width: 768px) {
+  //   height: 100svh
+    
+  // }
 }
-
 .mt-header {
   padding-top: var(--header-hight);
 }

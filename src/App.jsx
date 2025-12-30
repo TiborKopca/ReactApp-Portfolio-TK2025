@@ -10,12 +10,13 @@ import Footer from "./components/footer/Footer.jsx";
 import Skills from "./components/skills/Skills.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Contactform from "./components/contactform/Contactform.jsx";
+import { ThemeProvider } from "./hooks/ThemeContext";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <main>
         <Hero />
@@ -34,7 +35,7 @@ function App() {
         <Contactform />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 
