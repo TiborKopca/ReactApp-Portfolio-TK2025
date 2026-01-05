@@ -9,7 +9,8 @@
 ## Technology used
 - React 19.0
 - Sass 1.86.0
-- Emailjs/browser 4.4.1;
+<!-- - Emailjs/browser 4.4.1 -> migrated to Resend mail service compatible with netlify; -->
+- Resend 6.6.0
 <!-- npm install prop-types -->
 <!-- npm i framer-motion@10.16.4 -->
 <!-- npm i react-icons -->
@@ -26,9 +27,9 @@
 - Reusable components
 - Email service connected
 - Contact form validation
+- Dark Mode - nav menu icon
 
 ## Future improvements
-<!-- - Dark Mode - Clicking on this sun icon - let’s us toggle between light mode and dark mode. -->
 <!-- Add a spinner for better user feedback while loading. -->
 <!-- Replace the gradient with a solid color or skeleton loader for a simpler effect. -->
 <!-- Flipping skill cards with description on the other side -->

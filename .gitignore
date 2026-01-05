@@ -25,3 +25,12 @@ dist-ssr
 
 TiborKopcaReactPortfolio2025.fig
 TiborKopcaReactPortfolio2025.jam
+
+.env
+.env.local
+.env.*.local
+# Local Netlify folder
+.netlify
+
+#BACKUP FILES
+*.backup

@@ -6,7 +6,7 @@ function Header() {
   
   return (
     <header className="header" id="stickynavbar">
-      <a href="#Hero" aria-label="homepage link" className="header__logowrapper">
+      <a href="/" aria-label="homepage link" className="header__logowrapper">
         <svg
           alt="Tibor Kopca logo"
           className="logo__dimensions"

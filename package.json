@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:netlify": "netlify dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.86.0"
@@ -24,6 +24,10 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "netlify-cli": "^17.36.4",
     "vite": "^6.2.0"
+  },
+  "comments": {
+    "resend": "Resend is installed in netlify/functions/package.json (not here) because Netlify Functions use CommonJS while the main project uses ES modules"
   }
 }

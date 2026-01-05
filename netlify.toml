@@ -2,6 +2,18 @@
 
 [build]
   publish = "dist"
+  # Specify the functions directory for serverless functions
+  functions = "netlify/functions"
+
+[dev]
+  command = "vite"
+  port = 8888
+  targetPort = 5173
+  autoLaunch = false
+
+# Environment variables needed (set these in Netlify UI):
+# RESEND_API_KEY - Your Resend API key
+# RECIPIENT_EMAIL - Your email address to receive contact form submissions
 
 [[headers]]
   for = "/sitemap.xml"
@@ -20,3 +32,11 @@
   to = "https://tiborkopca.eu/:splat"
   status = 301
   force = true
+
+# CORS headers for API endpoints (allows your frontend to call the function)
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
