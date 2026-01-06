@@ -28,10 +28,10 @@
   align-items: center;
 
   max-width: 85rem; //1360px;
-  width: 100%;
+  width: 95%;
   border-radius: 0.5rem;
   padding: 1rem;
-  gap: 2rem;
+  gap: 1rem;
 
   font-family: Roboto;
   font-size: 1.1em;
@@ -77,11 +77,11 @@
     align-items: center;
 
     width: 70%;
-    gap: 2rem;
+    gap: 1rem;
 
     @media screen and (max-width: 768px) {
       width: 100%;
-      gap: 1.5rem;
+      gap: 0.9rem;
       font-size: 0.9em;
     }
 
@@ -235,6 +235,32 @@
 .disabled {
   //   cursor: not-allowed;
   //   opacity: 0.3;
+}
+
+/* Agreement Checkbox Styling */
+.agreement__checkbox {
+  width: 100%;
+  margin: 0.5rem 0;
+  
+  .agreement__link {
+    color: var(--color7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    
+    &:hover {
+      color: var(--color5);
+      border-bottom-color: var(--color5);
+      text-decoration: underline;
+    }
+    
+    &:focus {
+      outline: 2px solid var(--color7);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+  }
 }
 
 .retry__button {

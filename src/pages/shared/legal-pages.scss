@@ -1,0 +1,417 @@
+/* ******************************** */
+/* LEGAL PAGES (PRIVACY POLICY & T&C) */
+/* ******************************** */
+
+.legal-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--color6) 0%, var(--color4) 100%);
+  padding: 2rem 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+.legal-page__container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--color2-main); /* Light background in light mode */
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Dark mode adjustments */
+.legal-page.dark .legal-page__container {
+  background: var(--bg-color-card); /* Dark card background in dark mode */
+}
+
+/* ******************************** */
+/* BACK BUTTON */
+/* ******************************** */
+
+.legal-page__back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color5), var(--color7));
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  font-family: var(--font-Roboto-local-regular);
+
+  &:hover {
+    background: linear-gradient(135deg, var(--color7), var(--color5));
+    transform: translateX(-5px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  }
+
+  &:active {
+    transform: translateX(-2px);
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+.back-button__arrow {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.back-button__text {
+  font-family: var(--font-Roboto-local-regular);
+}
+
+/* ******************************** */
+/* HEADER */
+/* ******************************** */
+
+.legal-page__header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--color7);
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.legal-page__title {
+  color: var(--text-color-primary); /* Dark text in light mode, light text in dark mode */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-Roboto-local-bold);
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+}
+
+.legal-page__subtitle {
+  color: var(--grey-dark); /* Medium gray for subtitle */
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  font-family: var(--font-Roboto-local-regular);
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark mode adjustments */
+.legal-page.dark .legal-page__subtitle {
+  color: var(--text-color-secondary); /* Lighter gray in dark mode */
+}
+
+/* ******************************** */
+/* CONTENT */
+/* ******************************** */
+
+.legal-page__content {
+  color: var(--text-color-primary);
+  line-height: 1.8;
+}
+
+.legal-section {
+  margin-bottom: 2.5rem;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.legal-section__title {
+  color: var(--color7); /* Orange accent for headings */
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-Roboto-local-bold);
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.35rem;
+  }
+}
+
+.legal-subsection__title {
+  color: var(--text-color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  font-family: var(--font-Roboto-local-semibold);
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.15rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+.legal-section__text {
+  color: var(--text-color-primary);
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-family: var(--font-Roboto-local-regular);
+  opacity: 0.9; /* Slightly muted for readability */
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+/* Dark mode text adjustment */
+.legal-page.dark .legal-section__text {
+  opacity: 0.95; /* More visible in dark mode */
+}
+
+/* ******************************** */
+/* LISTS */
+/* ******************************** */
+
+.legal-list {
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+  color: var(--text-color-primary);
+  font-family: var(--font-Roboto-local-regular);
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+
+    strong {
+      color: var(--text-color-primary);
+      font-weight: 600;
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ******************************** */
+/* SERVICE CARDS */
+/* ******************************** */
+
+.service-card {
+  background: var(--color3); /* Light gray background */
+  border-left: 4px solid var(--color7);
+  padding: 1.25rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+
+  h4 {
+    color: var(--text-color-primary);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    font-family: var(--font-Roboto-local-semibold);
+  }
+
+  p {
+    color: var(--text-color-primary);
+    font-size: 0.95rem;
+    margin: 0 0 0.75rem 0;
+    font-family: var(--font-Roboto-local-regular);
+    opacity: 0.9;
+  }
+
+  a {
+    color: var(--color7);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color4);
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem;
+
+    h4 {
+      font-size: 1.05rem;
+    }
+
+    p, a {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Dark mode service cards */
+.legal-page.dark .service-card {
+  background: var(--bg-color-card-semi-transparent);
+}
+
+/* ******************************** */
+/* CONTACT INFO */
+/* ******************************** */
+
+.contact-info {
+  background: var(--color3);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--color7);
+  margin-top: 1rem;
+
+  p {
+    color: var(--text-color-primary);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-family: var(--font-Roboto-local-regular);
+    opacity: 0.9;
+
+    strong {
+      color: var(--text-color-primary);
+      font-weight: 600;
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1.25rem;
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Dark mode contact info */
+.legal-page.dark .contact-info {
+  background: var(--bg-color-card-semi-transparent);
+}
+
+.legal-section--contact {
+  background: linear-gradient(135deg, var(--color5) 0%, var(--color4) 100%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color7);
+  margin-top: 3rem;
+
+  .legal-section__title {
+    color: var(--white);
+  }
+
+  .legal-section__text {
+    color: var(--white);
+    opacity: 0.95;
+  }
+
+  .contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--white);
+
+    p, strong {
+      color: var(--white);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1.25rem;
+  }
+}
+
+/* ******************************** */
+/* FOOTER */
+/* ******************************** */
+
+.legal-page__footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--grey-dark);
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+}
+
+/* Dark mode footer border */
+.legal-page.dark .legal-page__footer {
+  border-top-color: var(--text-color-secondary);
+  opacity: 0.5;
+}
+
+/* ******************************** */
+/* RESPONSIVE TYPOGRAPHY */
+/* ******************************** */
+
+@media screen and (max-width: 768px) {
+  .legal-page__content {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .legal-page__content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* ******************************** */
+/* PRINT STYLES */
+/* ******************************** */
+
+@media print {
+  .legal-page {
+    background: white;
+  }
+
+  .legal-page__back-button {
+    display: none;
+  }
+
+  .legal-page__container {
+    box-shadow: none;
+  }
+
+  .legal-section {
+    page-break-inside: avoid;
+  }
+}

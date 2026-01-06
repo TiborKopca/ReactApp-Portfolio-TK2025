@@ -17,6 +17,9 @@ function Contactform() {
   // Checkbox for sending copy to sender
   const [sendCopyToSender, setSendCopyToSender] = useState(true); // Default: checked (send copy)
 
+  // Checkbox for agreeing to privacy policy and terms
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
+
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -95,12 +98,13 @@ function Contactform() {
   const handleReset = () => {
     setFormData({ name: "", email: "", message: "" });
     setSendCopyToSender(true); // Reset checkbox to checked
+    setAgreeToTerms(false); // Reset agreement checkbox
     setSubmitStatus(null);
     setErrorMessage("");
   };
 
-  // Check if form is valid
-  const isFormValid = formData.name && formData.email && formData.message;
+  // Check if form is valid (including agreement checkbox)
+  const isFormValid = formData.name && formData.email && formData.message && agreeToTerms;
 
   return (
     <section className="snap-container mt-header contact" id="Contact">
@@ -267,6 +271,61 @@ function Contactform() {
                   aria-label="Send me a copy of this message"
                 />
                 <span>Send me a copy of this message</span>
+              </label>
+            </div>
+
+            {/* Checkbox: Agree to Privacy Policy and Terms */}
+            <div className="inputfield__wrapper checkbox__wrapper agreement__checkbox">
+              <label 
+                htmlFor="agreeToTermsCheckbox" 
+                className="checkbox__label"
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '0.5rem',
+                  cursor: 'pointer',
+                  fontSize: '0.9em',
+                  userSelect: 'none'
+                }}
+              >
+                <input
+                  type="checkbox"
+                  id="agreeToTermsCheckbox"
+                  checked={agreeToTerms}
+                  onChange={(e) => setAgreeToTerms(e.target.checked)}
+                  disabled={isSubmitting}
+                  style={{
+                    cursor: 'pointer',
+                    width: '18px',
+                    height: '18px',
+                    minWidth: '18px',
+                    marginTop: '2px',
+                    accentColor: 'var(--color7)'
+                  }}
+                  aria-label="I agree to the Privacy Policy and Terms and Conditions"
+                  required
+                />
+                <span>
+                  I have read and agree to the{' '}
+                  <a 
+                    href="/privacy-policy" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="agreement__link"
+                  >
+                    Privacy Policy
+                  </a>
+                  {' '}and{' '}
+                  <a 
+                    href="/terms-conditions" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="agreement__link"
+                  >
+                    Terms and Conditions
+                  </a>
+                  *
+                </span>
               </label>
             </div>
 

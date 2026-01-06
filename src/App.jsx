@@ -2,6 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import "./App.scss";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import Parallax from "./components/parallax/Parallax.jsx";
@@ -12,11 +13,35 @@ import Projects from "./components/projects/Projects.jsx";
 import Contactform from "./components/contactform/Contactform.jsx";
 import { ThemeProvider } from "./hooks/ThemeContext";
 
+import CookieConsent from "./components/CookieConsent/CookieConsent.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
+import TermsConditions from "./pages/TermsConditions/TermsConditions.jsx";
+import NotFound from "./pages/NotFound/NotFound.jsx";
+
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <ThemeProvider>
+      <Routes>
+        {/* Main Portfolio Route */}
+        <Route path="/" element={<MainLayout />} />
+        
+        {/* Legal Pages Routes */}
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        
+        {/* 404 Not Found Route - Must be last */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ThemeProvider>
+  );
+}
+
+// Main Layout Component (your existing structure)
+function MainLayout() {
+  return (
+    <>
       <Header />
       <main>
         <Hero />
@@ -35,7 +60,10 @@ function App() {
         <Contactform />
       </main>
       <Footer />
-    </ThemeProvider>
+      
+      {/* Cookie Consent Banner - Only shows on main layout */}
+      <CookieConsent />
+    </>
   );
 }
 

@@ -36,6 +36,12 @@ package = "@netlify/plugin-functions-install-core"
   status = 301
   force = true
 
+# SPA Internal routing support
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # CORS headers for API endpoints (allows your frontend to call the function)
 [[headers]]
   for = "/.netlify/functions/*"

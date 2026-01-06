@@ -1,0 +1,232 @@
+/* ******************************** */
+/* COOKIE CONSENT BANNER */
+/* ******************************** */
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid var(--color7);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.cookie-consent.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-consent__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (max-width: 968px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.cookie-consent__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.cookie-consent__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  animation: bounce 2s infinite;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cookie-consent__text {
+  flex: 1;
+}
+
+.cookie-consent__title {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-Roboto-local-regular);
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+.cookie-consent__description {
+  color: var(--text-color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
+  font-family: var(--font-Roboto-local-regular);
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.cookie-consent__links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.cookie-consent__link {
+  color: var(--color7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color5);
+    text-decoration: underline;
+  }
+}
+
+.cookie-consent__separator {
+  color: var(--text-color-secondary);
+  font-size: 0.9rem;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  @media screen and (max-width: 968px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.cookie-consent__button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-Roboto-local-regular);
+  min-width: 120px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+    min-width: 100px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color7);
+    outline-offset: 2px;
+  }
+}
+
+.cookie-consent__button--decline {
+  background: transparent;
+  color: var(--text-color-secondary);
+  border: 2px solid var(--grey-dark);
+
+  &:hover {
+    background: var(--grey-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.cookie-consent__button--accept {
+  background: linear-gradient(135deg, var(--color5), var(--color7));
+  color: var(--white);
+  border: none;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, var(--color7), var(--color5));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* ******************************** */
+/* RESPONSIVE ADJUSTMENTS */
+/* ******************************** */
+
+@media screen and (max-width: 480px) {
+  .cookie-consent {
+    padding: 0.75rem;
+  }
+
+  .cookie-consent__container {
+    gap: 1rem;
+  }
+
+  .cookie-consent__icon {
+    font-size: 1.75rem;
+  }
+
+  .cookie-consent__title {
+    font-size: 1rem;
+  }
+
+  .cookie-consent__description {
+    font-size: 0.85rem;
+  }
+}
