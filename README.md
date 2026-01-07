@@ -75,18 +75,11 @@ https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-a
 ### Screenshots
 ![screenshot1](/src/assets/screenshots/screenshot.png)
 
-TODO
- React Router installed (npm install react-router-dom)
- Files updated (main.jsx, App.jsx, Footer.jsx)
- New components added (CookieConsent, Legal pages, NotFound)
- _redirects file created OR netlify.toml updated
- Tested locally (npm run dev)
- All routes work without refresh
- Theme works on all pages
- Anchor links still work
- Cookie banner appears once
- Build succeeds (npm run build)
- Ready to push!
+<!-- 
+TODO 
+
+-->
+
 
 
 

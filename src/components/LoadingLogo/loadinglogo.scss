@@ -1,0 +1,232 @@
+/* ******************************** */
+/* LOADING LOGO - SIMPLE & RELIABLE */
+/* ******************************** */
+
+/* CRITICAL: Show black screen IMMEDIATELY on page load */
+/* This prevents the flash of content before React loads */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 999998; /* Just below loading logo */
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Hide the black screen after page loads */
+body.logo-checked::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* After fade completes, remove it completely */
+body.logo-checked::before {
+  content: none;
+}
+
+.loading-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; /* Solid black */
+  z-index: 999999; /* Above everything (header is 100000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Smooth fade out when removed */
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-logo__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ******************************** */
+/* LOGO ANIMATIONS */
+/* ******************************** */
+
+.tk-logo {
+  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vw;
+  
+  /* Main spin animation */
+  animation: logoSpin 10s ease-in-out forwards;
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  60% {
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg);
+    opacity: 0;
+  }
+}
+
+/* Part 1: T Top - Fly in from top */
+.logo-T-RectangleTop.animated {
+  animation: flyInTop 2s ease-out forwards;
+}
+
+@keyframes flyInTop {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Part 2: T Bottom - Fly in from bottom */
+.logo-T-RectangleBottom.animated {
+  animation: flyInBottom 2s ease-out forwards;
+}
+
+@keyframes flyInBottom {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Part 3: K Arrow - Fly in from right */
+.logo-K-Path.animated {
+  animation: flyInRight 2s ease-out forwards;
+}
+
+@keyframes flyInRight {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ******************************** */
+/* SKIP HINT */
+/* ******************************** */
+
+.loading-logo__skip-hint {
+  opacity: 0;
+  animation: fadeInHint 1s ease-in 2s forwards;
+}
+
+@keyframes fadeInHint {
+  to {
+    opacity: 0.7;
+  }
+}
+
+.skip-hint__desktop,
+.skip-hint__mobile {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.skip-hint__mobile {
+  display: none;
+}
+
+/* ******************************** */
+/* RESPONSIVE */
+/* ******************************** */
+
+@media screen and (max-width: 768px) {
+  .tk-logo {
+    width: 80vw;
+    height: 80vw;
+  }
+  
+  .skip-hint__desktop {
+    display: none;
+  }
+  
+  .skip-hint__mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tk-logo {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+/* ******************************** */
+/* ACCESSIBILITY */
+/* ******************************** */
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-logo,
+  .tk-logo,
+  .logo-T-RectangleTop,
+  .logo-T-RectangleBottom,
+  .logo-K-Path,
+  .loading-logo__skip-hint {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

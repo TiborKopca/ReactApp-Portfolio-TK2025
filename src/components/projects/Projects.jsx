@@ -5,6 +5,7 @@ import Button from "../button/Button.jsx";
 import vueimage from "/src/assets/img/work/vue_drink_api500x500.avif";
 import volandoimage from "/src/assets/img/work/volando_art_500x500.jpg";
 import chucknorrisimage from "/src/assets/img/work/chucknorris_api500x500.avif";
+import hotelbrickimage from "/src/assets/img/work/hotelbrick_500x500.avif";
 
 function Projects() {
   const [progress, setProgress] = useState(100); // Full width at start
@@ -34,22 +35,13 @@ function Projects() {
 
   const projects = [
     {
-      id: 1,
-      imgsrc: vueimage,
-      link: "https://drink-api-login.netlify.app/",
-      imgalt: "Vue API SPA",
-      title: "Vue Framework Project - API",
-      description: "SPA Vue.js framework project with API calls. 2023",
-      buttonlabel: "Vue.js Project outside link",
-    },
-    {
-      id: 2,
-      imgsrc: volandoimage,
-      link: "https://volando.art/",
-      imgalt: "Voland art site image",
-      title: "Artists presentation site",
-      description: "Personal Website with an gallery. PHP, Parallax.js, 2020-2021 (collaboration)",
-      buttonlabel: "Volando.art - Artists presentation site outside link",
+      id: 4,
+      imgsrc: hotelbrickimage,
+      link: "https://tibor.cacharreando.net/hotel/",
+      imgalt: "Hotel Brick",
+      title: "Hotel Brick",
+      description: "Comprehensive Front-End layout for Hotel website, gallery, dark mode, and more. 2025",
+      buttonlabel: "Hotel website project outside link",
     },
     {
       id: 3,
@@ -60,6 +52,25 @@ function Projects() {
       description: "Small Fetch API project that shows random joke about Chuck Norris. 2024",
       buttonlabel: "Chuck Norris Jokes API website outside link",
     },
+    {
+      id: 2,
+      imgsrc: vueimage,
+      link: "https://drink-api-login.netlify.app/",
+      imgalt: "Vue API SPA",
+      title: "Vue Framework Project - API",
+      description: "SPA Vue.js framework project with API calls. 2023",
+      buttonlabel: "Vue.js Project outside link",
+    },
+    {
+      id: 1,
+      imgsrc: volandoimage,
+      link: "https://volando.art/",
+      imgalt: "Voland art site image",
+      title: "Artists presentation site",
+      description: "Personal Website with an gallery. PHP, Parallax.js, 2020-2021 (collaboration)",
+      buttonlabel: "Volando.art - Artists presentation site outside link",
+    },
+    
   ];
 
 
