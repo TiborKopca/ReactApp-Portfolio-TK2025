@@ -6,6 +6,10 @@ import vueimage from "/src/assets/img/work/vue_drink_api500x500.avif";
 import volandoimage from "/src/assets/img/work/volando_art_500x500.jpg";
 import chucknorrisimage from "/src/assets/img/work/chucknorris_api500x500.avif";
 import hotelbrickimage from "/src/assets/img/work/hotelbrick_500x500.avif";
+import TPVimage from "/src/assets/img/work/TPV_500x500.avif";
+import portfolioimage from "/src/assets/img/work/portfolio_500x500.avif";
+import banksystemimage from "/src/assets/img/work/bank_500x500.avif";
+// import eshopimage from "/src/assets/img/work/eshop_500x500.avif";
 
 function Projects() {
   const [progress, setProgress] = useState(100); // Full width at start
@@ -34,10 +38,46 @@ function Projects() {
 
 
   const projects = [
+    // {
+    //   id: 8,
+    //   imgsrc: eshopimage,
+    //   link: "https://cacharreando.net/tibor/sistemabanco/",
+    //   imgalt: "",
+    //   title: "",
+    //   description: "2025",
+    //   buttonlabel: "",
+    // },
+    {
+      id: 7,
+      imgsrc: banksystemimage,
+      link: "https://cacharreando.net/tibor/sistemabanco/",
+      imgalt: "Bank de application",
+      title: "Bank Portal Application",
+      description: "Dashboard Control Panel. Account Management, Reports. DB connection. 2025",
+      buttonlabel: "Bank project outside link",
+    },
+    {
+      id: 6,
+      imgsrc: portfolioimage,
+      link: "https://cacharreando.net/tibor/portfoliotk/",
+      imgalt: "Portfolio",
+      title: "Portfolio Website",
+      description: "Personal Portfolio Website. Dark mode. Animations. Tabs navigation. 2025",
+      buttonlabel: "Portfolio project outside link",
+    },
+    {
+      id: 5,
+      imgsrc: TPVimage,
+      link: "https://cacharreando.net/tibor/TPVmaquina/",
+      imgalt: "TPV Machine",
+      title: "TPV Machine Interface",
+      description: "Front-End layout for TPV Machine Interface. Printing of tickets. Adding new products. 2025",
+      buttonlabel: "TPV Machine project outside link",
+    },
     {
       id: 4,
       imgsrc: hotelbrickimage,
-      link: "https://tibor.cacharreando.net/hotel/",
+      link: "https://cacharreando.net/tibor/hotel/",
       imgalt: "Hotel Brick",
       title: "Hotel Brick",
       description: "Comprehensive Front-End layout for Hotel website, gallery, dark mode, and more. 2025",

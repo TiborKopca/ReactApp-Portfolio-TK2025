@@ -37,6 +37,7 @@ https://reactrouter.com/ -->
 https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps -->
 - Cookies implementation - CONSENT POPUP
 - Privacy Policy and Terms of Use subpages
+- Animated logo on first visit
 
 ## Future improvements
 <!-- Creating Links to the subsections of the single page application instead using <a> tags -->
@@ -51,6 +52,8 @@ https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-a
 <!-- Animated form placeholders -->
 <!-- Regex form validation -->
 <!-- Contact form human verification -->
+<!-- Localization - different languages -->
+<!-- ADD MORE PROJECTS -->
 
 ## Structure
 <!-- Final structure of the project -->
@@ -77,7 +80,13 @@ https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-a
 
 <!-- 
 TODO 
-
+Connect to the database projects
+-sistema banco
+-eshop
+-libreria
+-sakila app
+-consultas sql
+-sakila-app
 -->
 
 
